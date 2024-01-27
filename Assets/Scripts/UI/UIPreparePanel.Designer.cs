@@ -5,11 +5,12 @@ using QFramework;
 
 namespace QFramework.ThunderCooker
 {
-	// Generate Id:74943d67-a212-4ec7-bf1d-518d0df5925c
+	// Generate Id:e110b06d-04bc-4898-84ba-a40c59f9117e
 	public partial class UIPreparePanel
 	{
 		public const string Name = "UIPreparePanel";
-		
+		[SerializeField]
+		public TMPro.TextMeshProUGUI txt_money;
 		[SerializeField]
 		public TMPro.TextMeshProUGUI txtScores;
 		[SerializeField]
@@ -19,26 +20,34 @@ namespace QFramework.ThunderCooker
 		[SerializeField]
 		public UnityEngine.UI.Button startPickBtn;
 		[SerializeField]
+		public RectTransform items;
+		[SerializeField]
 		public UnityEngine.UI.Button pBackBtn;
 		[SerializeField]
+		public RectTransform actors;
+		[SerializeField]
 		public UnityEngine.UI.Button aBackBtn;
-		
+
 		public GameObject goalPanel;
 		public GameObject porpsPanel;
 		public GameObject actorsPanel;
+		
+		public CharacterController controller;
+		public GameObject currentActor;
 		
 		private UIPreparePanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
+			txt_money = null;
 			txtScores = null;
 			actorsShopBtn = null;
 			propsShopBtn = null;
 			startPickBtn = null;
+			items = null;
 			pBackBtn = null;
+			actors = null;
 			aBackBtn = null;
-
-			//goalPanel.DestroySelf();
 			
 			mData = null;
 		}

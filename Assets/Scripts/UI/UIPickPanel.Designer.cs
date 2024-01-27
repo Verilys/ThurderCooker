@@ -5,18 +5,27 @@ using QFramework;
 
 namespace QFramework.ThunderCooker
 {
-	// Generate Id:44b7e651-b1d1-448c-bb84-d6f12d4ed7f5
+	// Generate Id:8123ab2f-d5be-4bb0-9ed5-af4712dc6005
 	public partial class UIPickPanel
 	{
 		public const string Name = "UIPickPanel";
 		
 		[SerializeField]
+		public RectTransform aContent;
+		[SerializeField]
+		public RectTransform pContent;
+		[SerializeField]
 		public UnityEngine.UI.Button nextBtn;
+		
+		public CharacterController controller;
+		public GameObject currentActor;
 		
 		private UIPickPanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
+			aContent = null;
+			pContent = null;
 			nextBtn = null;
 			
 			mData = null;

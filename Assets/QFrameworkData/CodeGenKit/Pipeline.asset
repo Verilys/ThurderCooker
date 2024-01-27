@@ -19,11 +19,11 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos: []
-    ScriptsFolder: Assets/Scripts/Game
-    ClassName: CharacterController
+    ScriptsFolder: Assets\Scripts\Game
+    ClassName: CharacterSpineController
     Namespace: QFramework.ThunderCooker
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace QFramework.ThunderCooker\r\n{\r\n\tpublic
-      partial class CharacterController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
-      Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:47907158-3d0e-44bd-93d7-6ee784855113\r\nusing UnityEngine;\r\n\r\nnamespace
-      QFramework.ThunderCooker\r\n{\r\n\tpublic partial class CharacterController\r\n\t{\r\n\r\n\t}\r\n}\r\n"
+      partial class CharacterSpineController : ViewController\r\n\t{\r\n\t\tvoid
+      Start()\r\n\t\t{\r\n\t\t\t// Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:9b1b37fa-3e83-4a6f-bae2-1174d399bca6\r\nusing UnityEngine;\r\n\r\nnamespace
+      QFramework.ThunderCooker\r\n{\r\n\tpublic partial class CharacterSpineController\r\n\t{\r\n\r\n\t}\r\n}\r\n"

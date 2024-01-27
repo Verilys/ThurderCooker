@@ -304,10 +304,10 @@
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\MoonSharp\Interpreter\Tree\Statements\ForEachLoopStatement.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\PackageKit\Markdown\Renderer\MDRendererInlineAutoLink.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\MoonSharp\Interpreter\Tree\Expressions\IndexExpression.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\_CoreKit\CodeGenKit\Scripts\Framework\Code\Symbol\CloseBraceCode.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\MoonSharp\Interpreter\IO\BinDumpBinaryReader.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\EventKit\EventTrigger\Physics\OnTriggerExit2DEventTrigger.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\EventKit\EventTrigger\Physics\OnCollisionStayEventTrigger.cs" />
+     <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\MoonSharp\Interpreter\IO\BinDumpBinaryReader.cs" />
+     <Compile Include="Assets\QFramework\Toolkits\_CoreKit\CodeGenKit\Scripts\Framework\Code\Symbol\CloseBraceCode.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\MoonSharp\Interpreter\Interop\IGeneratorUserDataDescriptor.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\Internal\APIDoc\Framework\Attributes\APIExampleCodeAttribute.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\Editor\MoonSharpImporter.cs" />
@@ -615,8 +615,8 @@
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\MoonSharp\Interpreter\Interop\BasicDescriptors\DispatchingUserDataDescriptor.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\MoonSharp\Interpreter\Interop\BasicDescriptors\MemberDescriptorAccess.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\PackageKit\Framework\Utilities\MutableTuple.cs" />
-     <Compile Include="Assets\QFramework\Toolkits\_CoreKit\PackageKit\EditorKit\EasyIMGUI.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\MoonSharp\Interpreter\DataTypes\Coroutine.cs" />
+     <Compile Include="Assets\QFramework\Toolkits\_CoreKit\PackageKit\EditorKit\EasyIMGUI.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\GraphKit\IMGUI\Scripts\Editor\IMGUIGraphResources.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\MoonSharp\Interpreter\Execution\VM\Processor\DebugContext.cs" />
      <Compile Include="Assets\QFramework\Toolkits\_CoreKit\ScriptKit\MoonSharp\Interpreter\Errors\DynamicExpressionException.cs" />

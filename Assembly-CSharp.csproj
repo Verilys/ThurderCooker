@@ -56,25 +56,31 @@
      <Compile Include="Assets\Scripts\UI\UIEndPanel.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UIResultPanel.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UIGameFloatPanel.Designer.cs" />
-     <Compile Include="Assets\Scripts\UI\UIGoldPPrompt.cs" />
+     <Compile Include="Assets\Scripts\Command\PurchaseSuccessCommand.cs" />
+     <Compile Include="Assets\Scripts\UI\UIGoldPrompt.cs" />
      <Compile Include="Assets\Scripts\UI\UIPreparePanel.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\SimpleRCTests.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\PoolTests.cs" />
      <Compile Include="Assets\Scripts\Command\StartGameCommand.cs" />
      <Compile Include="Assets\Scripts\UI\UIResultPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\UIActorProperty.cs" />
      <Compile Include="Assets\Scripts\UI\UIPickPanel.Designer.cs" />
+     <Compile Include="Assets\Scripts\Game\CharacterController.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI\UIKitTestPanel.Designer.cs" />
-     <Compile Include="Assets\Scripts\UI\UIGoldPPrompt.Designer.cs" />
+     <Compile Include="Assets\Scripts\UI\UIGoldPrompt.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UISettingsPanel.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UIStartPanel.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\0.FluentAPI\ListPoolTest.cs" />
+     <Compile Include="Assets\Scripts\Game\CharacterController.cs" />
      <Compile Include="Assets\Scripts\Command\TimeOverCommand.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\FSMTests.cs" />
      <Compile Include="Assets\QFrameworkTests\4.AudioTests\AudioKitV0_10_XTests.cs" />
+     <Compile Include="Assets\Scripts\Command\PurchaseCommand.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI\UIKitTestPanel2.cs" />
      <Compile Include="Assets\Scripts\Game\GameAppController.cs" />
      <Compile Include="Assets\Scripts\UI\UIGameFloatPanel.cs" />
      <Compile Include="Assets\Scripts\Event\GameStartEvent.cs" />
+     <Compile Include="Assets\Scripts\Command\PurchaseFailCommand.cs" />
      <Compile Include="Assets\Scripts\Game\GameApp.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI\UIKitTestPanel.cs" />
      <Compile Include="Assets\Scripts\Model\DataModel.cs" />
@@ -83,8 +89,8 @@
      <Compile Include="Assets\Scripts\UI\UISurePrompt.cs" />
      <Compile Include="Assets\Scripts\UI\UISurePrompt.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\UIKitV0_10_XTests.cs" />
-     <Compile Include="Assets\Scripts\Game\CharacterController.cs" />
-     <Compile Include="Assets\Scripts\Game\CharacterController.Designer.cs" />
+     <Compile Include="Assets\Scripts\Game\CharacterSpineController.Designer.cs" />
+     <Compile Include="Assets\Scripts\Game\CharacterSpineController.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\QFramework\Framework\PackageVersion.json" />
      <Folder Include="Library\PackageCache\com.unity.ads@4.4.2\Runtime" />
@@ -109,6 +115,7 @@
      <None Include="Library\PackageCache\com.unity.modules.ai@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.10\Tests\Runtime" />
      <Folder Include="Library\PackageCache\com.unity.modules.animation@1.0.0" />
+     <Folder Include="Assets\Art\Prefab" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\basecommands.en.txt" />
      <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\xdiff.ko.txt" />
@@ -275,6 +282,7 @@
      <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0" />
      <None Include="Assets\Spine\package.json" />
+     <Folder Include="Assets\Art\Font" />
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
      <Folder Include="Assets\QFrameworkData\LocaleKit\Resources" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
@@ -1072,6 +1080,10 @@
       <Project>{857996ad-ac6b-d63e-8a61-cc356e3ca646}</Project>
       <Name>Purchasing.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{cc68a7d0-3754-c972-e554-e2f69f13aed2}</Project>
+      <Name>spine-unity-examples-editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{a433a623-516c-b3d8-f127-3ca3dddc667a}</Project>
       <Name>Unity.VSCode.Editor</Name>
@@ -1096,6 +1108,10 @@
       <Project>{a75d7015-92db-771a-8487-497dfb05d6bd}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{e9882290-ae30-8cf1-3835-0e025b7c9068}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{bf3ac864-386d-e735-3a30-7fcfcb2bc112}</Project>
       <Name>Unity.Timeline</Name>
@@ -1111,6 +1127,10 @@
     <ProjectReference Include="UnityEngine.Advertisements.csproj">
       <Project>{178dc9e4-4257-6e9d-2c80-e13d4dbfbd76}</Project>
       <Name>UnityEngine.Advertisements</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples.csproj">
+      <Project>{b60dd44e-3001-6391-33e5-94bf4390874b}</Project>
+      <Name>spine-unity-examples</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
       <Project>{89780058-50e4-33bd-4e77-9ef9ac3053e2}</Project>
@@ -1208,33 +1228,21 @@
       <Project>{dcfe3c5d-ea1f-138e-4da4-f74640704c83}</Project>
       <Name>UnityEditor.Purchasing</Name>
     </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{e64dc3da-7001-4d62-e1dd-3c7d733f613f}</Project>
+      <Name>spine-unity-editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
       <Project>{8f256fa2-c8bb-0e6b-eb3b-fd19d7450121}</Project>
       <Name>UnityEditor.SpatialTracking</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Advertisements.Editor.csproj">
-      <Project>{098809ac-cd14-3ebf-6ba2-05eb23350b11}</Project>
-      <Name>UnityEngine.Advertisements.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity.csproj">
-      <Project>{e9882290-ae30-8cf1-3835-0e025b7c9068}</Project>
-      <Name>spine-unity</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity-examples.csproj">
-      <Project>{b60dd44e-3001-6391-33e5-94bf4390874b}</Project>
-      <Name>spine-unity-examples</Name>
     </ProjectReference>
     <ProjectReference Include="spine-csharp.csproj">
       <Project>{d198f075-96b8-f01c-784a-1116ee55cd16}</Project>
       <Name>spine-csharp</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-unity-examples-editor.csproj">
-      <Project>{cc68a7d0-3754-c972-e554-e2f69f13aed2}</Project>
-      <Name>spine-unity-examples-editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity-editor.csproj">
-      <Project>{e64dc3da-7001-4d62-e1dd-3c7d733f613f}</Project>
-      <Name>spine-unity-editor</Name>
+    <ProjectReference Include="UnityEngine.Advertisements.Editor.csproj">
+      <Project>{098809ac-cd14-3ebf-6ba2-05eb23350b11}</Project>
+      <Name>UnityEngine.Advertisements.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

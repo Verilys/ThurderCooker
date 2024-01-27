@@ -1,18 +1,55 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using TMPro;
 
 namespace QFramework.ThunderCooker
 {
 	public class UIPreparePanelData : UIPanelData
 	{
 	}
-	public partial class UIPreparePanel : UIPanel
+	public partial class UIPreparePanel : UIPanel, IController
 	{
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UIPreparePanelData ?? new UIPreparePanelData();
 			// please add init code here
+			var mModel = this.GetModel<DataModel>();
+			txt_money.text = mModel.Coins.ToString();
+			var foundObject = GameObject.Find("CharacterController");
+			if (foundObject != null)
+			{
+				Debug.Log("找到物体：" + foundObject.name);
+				controller = foundObject.GetComponent<CharacterController>();
+				foreach (var actor in controller.shopCharacters)
+                {
+                    //实例化角色
+                    currentActor = Instantiate(actor, actors);
+                    currentActor.name = actor.GetComponent<UIActorProperty>().name;
+                    Button purchaseBtn = currentActor.GetComponent<Button>();
+                    bool isPurchase = currentActor.GetComponent<UIActorProperty>().isPurchase;
+                    //如果人物按钮已经被购买
+                    if (isPurchase)
+                    {
+	                    purchaseBtn.interactable = false;
+                    }
+                    else
+                    {
+	                    purchaseBtn.onClick.AddListener(() =>
+	                    {
+		                    currentActor = purchaseBtn.gameObject;
+		                    UIKit.OpenPanel<UISurePrompt>();
+		                    //this.SendCommand<PurchaseCommand>();
+	                    });    
+                    }
+
+                }
+			}
+			else
+			{
+				Debug.LogWarning("未找到物体");
+			}
+			
 			startPickBtn.onClick.AddListener((() =>
             {
             	UIKit.OpenPanel<UIPickPanel>();
@@ -39,11 +76,6 @@ namespace QFramework.ThunderCooker
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
-			GameObject obj = GameObject.Find("UIResultPanel"); 
-			if (obj != null)
-			{
-				Destroy(obj);
-			}
 		}
 		
 		protected override void OnShow()
@@ -79,7 +111,11 @@ namespace QFramework.ThunderCooker
 					break;
 				
 			}
-			
+		}
+		
+		public IArchitecture GetArchitecture()
+		{
+			return GameApp.Interface;
 		}
 	}
 }

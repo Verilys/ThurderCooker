@@ -12,7 +12,6 @@ namespace QFramework.ThunderCooker
         {
             // 注册 Model
             this.RegisterModel(new DataModel());
-            
         }
     }    
 }

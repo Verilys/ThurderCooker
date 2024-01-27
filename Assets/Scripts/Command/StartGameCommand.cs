@@ -9,7 +9,7 @@ namespace QFramework.ThunderCooker
             //var gameModel = this.GetModel<IGameModel>();
             var gameModel = this.GetModel<DataModel>();
             gameModel.Days = 3;
-            gameModel.Coins = 0;
+            gameModel.Coins = 10;
             gameModel.Scores = 0;
             SceneManager.LoadScene("Prepare");
             this.SendEvent<GameStartEvent>();

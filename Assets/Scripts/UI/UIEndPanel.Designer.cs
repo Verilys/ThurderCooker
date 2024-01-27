@@ -11,7 +11,7 @@ namespace QFramework.ThunderCooker
 		public const string Name = "UIEndPanel";
 		
 		[SerializeField]
-		public TMPro.TextMeshProUGUI title;
+		public TMPro.TextMeshProUGUI txt_ending;
 		[SerializeField]
 		public UnityEngine.UI.Button backBtn;
 		
@@ -19,7 +19,7 @@ namespace QFramework.ThunderCooker
 		
 		protected override void ClearUIComponents()
 		{
-			title = null;
+			txt_ending = null;
 			backBtn = null;
 			
 			mData = null;

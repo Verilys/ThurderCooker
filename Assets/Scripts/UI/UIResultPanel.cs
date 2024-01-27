@@ -7,7 +7,7 @@ namespace QFramework.ThunderCooker
 {
 	public class UIResultPanelData : UIPanelData
 	{
-		
+		public int targetScore = 1500;
 	}
 	public partial class UIResultPanel : UIPanel, IController
 	{
@@ -22,17 +22,26 @@ namespace QFramework.ThunderCooker
 			{
 				gameModel.Days--;
 				Debug.Log("剩余天数："+gameModel.Days);
+				
 				if (gameModel.Days == 0)
 				{
+					if (gameModel.Scores >= mData.targetScore)
+					{
+						gameModel.isWin = true;
+					}
+					else
+					{
+						gameModel.isWin = false;
+					}
+					SceneManager.LoadScene("Prepare");
 					UIKit.OpenPanel<UIEndPanel>();	
 				}
-
 				else
 				{
+					SceneManager.LoadScene("Prepare");
 					UIKit.OpenPanel<UIPreparePanel>();
 				}
-
-				SceneManager.LoadScene("Prepare");
+				
 				this.CloseSelf();
 			}));
 		}
