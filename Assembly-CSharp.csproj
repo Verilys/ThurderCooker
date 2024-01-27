@@ -46,6 +46,7 @@
      <Compile Include="Assets\Scripts\UI\UITutorialPanel.cs" />
      <Compile Include="Assets\QFrameworkTests\4.AudioTests\AudioKitV0_8_XTests.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI\UIKitTestPanel2.Designer.cs" />
+     <Compile Include="Assets\Scripts\Utility\CountdownTimer.cs" />
      <Compile Include="Assets\Scripts\UI\UIPreparePanel.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\ActionKitTests\ActionKit0_0_6Tests.cs" />
      <Compile Include="Assets\Scripts\UI\UISettingsPanel.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\Scripts\UI\UIPreparePanel.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\SimpleRCTests.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\PoolTests.cs" />
+     <Compile Include="Assets\Scripts\Command\StartGameCommand.cs" />
      <Compile Include="Assets\Scripts\UI\UIResultPanel.cs" />
      <Compile Include="Assets\Scripts\UI\UIPickPanel.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI\UIKitTestPanel.Designer.cs" />
@@ -66,16 +68,20 @@
      <Compile Include="Assets\Scripts\UI\UISettingsPanel.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UIStartPanel.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\0.FluentAPI\ListPoolTest.cs" />
+     <Compile Include="Assets\Scripts\Command\TimeOverCommand.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\FSMTests.cs" />
      <Compile Include="Assets\QFrameworkTests\4.AudioTests\AudioKitV0_10_XTests.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI\UIKitTestPanel2.cs" />
+     <Compile Include="Assets\Scripts\Game\GameAppController.cs" />
      <Compile Include="Assets\Scripts\UI\UIGameFloatPanel.cs" />
+     <Compile Include="Assets\Scripts\Event\GameStartEvent.cs" />
      <Compile Include="Assets\Scripts\Game\GameApp.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI\UIKitTestPanel.cs" />
+     <Compile Include="Assets\Scripts\Model\DataModel.cs" />
      <Compile Include="Assets\Scripts\UI\UIStartPanel.cs" />
+     <Compile Include="Assets\Scripts\Utility\Singleton.cs" />
      <Compile Include="Assets\Scripts\UI\UISurePrompt.cs" />
      <Compile Include="Assets\Scripts\UI\UISurePrompt.Designer.cs" />
-     <Compile Include="Assets\Scripts\Game\GameApp.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\UIKitV0_10_XTests.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\QFramework\Framework\PackageVersion.json" />
@@ -146,6 +152,7 @@
      <Folder Include="Assets\QFrameworkTests\3.UIKitTests" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\xdiff.zh-Hant.txt" />
      <Folder Include="Assets\Art\UIPrefab" />
+     <Folder Include="Assets\Scripts\System" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\xdiff.en.txt" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <None Include="Assets\QFrameworkTests\1.CoreTests\PackageVersion.json" />
@@ -188,6 +195,7 @@
      <Folder Include="Assets\UI Toolkit" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\i3.en.txt" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\package.json" />
+     <Folder Include="Assets\Scripts\Command" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\images.es.txt" />
@@ -249,6 +257,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\commontypes.en.txt" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationExceptions.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\differences.ja.txt" />
+     <Folder Include="Assets\Scripts\Model" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\i3.ja.txt" />
      <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\link.xml" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\cm-help.en.txt" />
@@ -311,6 +320,7 @@
      <Folder Include="Assets\Art" />
      <None Include="Library\PackageCache\com.unity.modules.uielementsnative@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.purchasing@4.9.3\ValidationConfig.json" />
+     <Folder Include="Assets\Scripts\Utility" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.24" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
@@ -404,6 +414,7 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.10" />
+     <Folder Include="Assets\Scripts\Event" />
      <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Folder Include="Assets\QFramework" />

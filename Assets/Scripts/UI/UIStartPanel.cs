@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using UnityEngine.SceneManagement;
 
 namespace QFramework.ThunderCooker
 {
 	public class UIStartPanelData : UIPanelData
 	{
 	}
-	public partial class UIStartPanel : UIPanel
+	public partial class UIStartPanel : UIPanel, IController
 	{
 		protected override void OnInit(IUIData uiData = null)
 		{
@@ -16,6 +17,8 @@ namespace QFramework.ThunderCooker
 			startBtn.onClick.AddListener(() =>
 			{
 				Debug.Log("start game");
+				this.SendCommand<StartGameCommand>();
+				
 				UIKit.OpenPanel<UITutorialPanel>();
 				this.CloseSelf();
 			});
@@ -48,6 +51,11 @@ namespace QFramework.ThunderCooker
 		
 		protected override void OnClose()
 		{
+		}
+		
+		public IArchitecture GetArchitecture()
+		{
+			return GameApp.Interface;
 		}
 	}
 }

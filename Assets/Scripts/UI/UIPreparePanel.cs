@@ -39,6 +39,11 @@ namespace QFramework.ThunderCooker
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
+			GameObject obj = GameObject.Find("UIResultPanel"); 
+			if (obj != null)
+			{
+				Destroy(obj);
+			}
 		}
 		
 		protected override void OnShow()
