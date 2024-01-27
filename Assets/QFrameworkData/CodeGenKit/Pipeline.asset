@@ -18,36 +18,12 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos:
-    - TypeName: TMPro.TextMeshProUGUI
-      PathToRoot: GoalPanel/txtScores
-      MemberName: txtScores
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: GoalPanel/Options/actorsShopBtn
-      MemberName: actorsShopBtn
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: GoalPanel/Options/propsShopBtn
-      MemberName: propsShopBtn
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: GoalPanel/Options/startPickBtn
-      MemberName: startPickBtn
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: PorpsPanel/pBackBtn
-      MemberName: pBackBtn
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: ActorsPanel/aBackBtn
-      MemberName: aBackBtn
+    BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: UIPreparePanel
+    ClassName: CharacterController
     Namespace: QFramework.ThunderCooker
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace QFramework.ThunderCooker\r\n{\r\n\tpublic
-      partial class UIPreparePanel : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class CharacterController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:872dfbe0-a4fb-4a9e-a412-73389e64616b\r\nusing UnityEngine;\r\n\r\nnamespace
-      QFramework.ThunderCooker\r\n{\r\n\tpublic partial class UIPreparePanel\r\n\t{\r\n\r\n\t\tpublic
-      TMPro.TextMeshProUGUI txtScores;\r\n\r\n\t\tpublic UnityEngine.UI.Button actorsShopBtn;\r\n\r\n\t\tpublic
-      UnityEngine.UI.Button propsShopBtn;\r\n\r\n\t\tpublic UnityEngine.UI.Button
-      startPickBtn;\r\n\r\n\t\tpublic UnityEngine.UI.Button pBackBtn;\r\n\r\n\t\tpublic
-      UnityEngine.UI.Button aBackBtn;\r\n\r\n\t\tpublic UnityEngine.GameObject GoalPanel;\r\n\r\n\t\tpublic
-      UnityEngine.GameObject PorpsPanel;\r\n\r\n\t\tpublic UnityEngine.GameObject
-      ActorsPanel;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:47907158-3d0e-44bd-93d7-6ee784855113\r\nusing UnityEngine;\r\n\r\nnamespace
+      QFramework.ThunderCooker\r\n{\r\n\tpublic partial class CharacterController\r\n\t{\r\n\r\n\t}\r\n}\r\n"

@@ -43,6 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitCreateService\Editor\UIKitCreateServiceView.cs" />
      <Folder Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitCreateService\Editor" />
+     <Folder Include="Assets\Editor" />
      <None Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitCreateService\Editor\packagekitconfig.json" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.29f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -872,6 +873,26 @@
     <ProjectReference Include="UnityEngine.Advertisements.Editor.csproj">
       <Project>{098809ac-cd14-3ebf-6ba2-05eb23350b11}</Project>
       <Name>UnityEngine.Advertisements.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{e9882290-ae30-8cf1-3835-0e025b7c9068}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples.csproj">
+      <Project>{b60dd44e-3001-6391-33e5-94bf4390874b}</Project>
+      <Name>spine-unity-examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-csharp.csproj">
+      <Project>{d198f075-96b8-f01c-784a-1116ee55cd16}</Project>
+      <Name>spine-csharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{cc68a7d0-3754-c972-e554-e2f69f13aed2}</Project>
+      <Name>spine-unity-examples-editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{e64dc3da-7001-4d62-e1dd-3c7d733f613f}</Project>
+      <Name>spine-unity-editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

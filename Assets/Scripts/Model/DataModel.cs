@@ -54,6 +54,9 @@ namespace QFramework.ThunderCooker
                 mCoins = value;
             }
         }
+
+
+        public GameObject[] characters;
         
         protected override void OnInit()
         {
