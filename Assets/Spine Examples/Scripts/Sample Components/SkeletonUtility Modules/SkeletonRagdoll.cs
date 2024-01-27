@@ -87,7 +87,7 @@ namespace Spine.Unity.Examples {
 		Transform ragdollRoot;
 		public Rigidbody RootRigidbody { get; private set; }
 		public Bone StartingBone { get; private set; }
-		Vector3 rootOffset;
+		[SerializeField]Vector3 rootOffset;
 		public Vector3 RootOffset { get { return this.rootOffset; } }
 		bool isActive;
 		public bool IsActive { get { return this.isActive; } }
@@ -126,7 +126,8 @@ namespace Spine.Unity.Examples {
 		}
 
 		public Vector3 EstimatedSkeletonPosition {
-			get { return RootRigidbody.position - rootOffset; }
+			get {
+                return RootRigidbody.position - rootOffset; }
 		}
 
 		/// <summary>Instantiates the ragdoll simulation and applies its transforms to the skeleton.</summary>

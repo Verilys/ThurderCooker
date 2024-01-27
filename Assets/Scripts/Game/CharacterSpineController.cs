@@ -13,17 +13,26 @@ namespace QFramework.ThunderCooker
 			}
 			
 			var findObj = GameObject.Find("CharacterController");
-			CharacterController controller = findObj.GetComponent<CharacterController>();
-			foreach (var actor in controller.backpackCharacters)
+			if (findObj == null)
 			{
-				foreach (var spineActor in SpineCharacters)
-				{
-					if (actor.name == spineActor.name)
-					{
-						spineActor.SetActive(true);
-					}
-				}
+				Debug.LogWarning("没找到！");
 			}
+			else
+			{
+				CharacterController controller = findObj.GetComponent<CharacterController>();
+            	foreach (var actor in controller.backpackCharacters)
+            	{
+            		foreach (var spineActor in SpineCharacters)
+            		{
+            			if (actor.name == "UI_" + spineActor.name)
+            			{
+	                        Debug.Log("开启玩家");
+            				spineActor.SetActive(true);
+            			}
+            		}
+            	}	
+			}
+			
 		}
 	}
 }

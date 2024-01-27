@@ -1,0 +1,83 @@
+
+垃圾桶分层.png
+size: 959,596
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+大腿右
+  rotate: true
+  xy: 852, 390
+  size: 67, 104
+  orig: 67, 104
+  offset: 0, 0
+  index: -1
+大腿左
+  rotate: false
+  xy: 813, 2
+  size: 77, 121
+  orig: 77, 121
+  offset: 0, 0
+  index: -1
+大臂右
+  rotate: true
+  xy: 619, 227
+  size: 99, 193
+  orig: 99, 193
+  offset: 0, 0
+  index: -1
+大臂左
+  rotate: true
+  xy: 619, 100
+  size: 125, 192
+  orig: 125, 192
+  offset: 0, 0
+  index: -1
+头
+  rotate: true
+  xy: 2, 7
+  size: 587, 615
+  orig: 587, 615
+  offset: 0, 0
+  index: -1
+小腿右
+  rotate: true
+  xy: 619, 24
+  size: 74, 115
+  orig: 74, 115
+  offset: 0, 0
+  index: -1
+小腿左
+  rotate: false
+  xy: 852, 459
+  size: 104, 135
+  orig: 104, 135
+  offset: 0, 0
+  index: -1
+小臂右
+  rotate: true
+  xy: 619, 328
+  size: 120, 203
+  orig: 120, 203
+  offset: 0, 0
+  index: -1
+小臂左
+  rotate: true
+  xy: 619, 450
+  size: 144, 231
+  orig: 144, 231
+  offset: 0, 0
+  index: -1
+肩膀右
+  rotate: true
+  xy: 824, 297
+  size: 91, 130
+  orig: 91, 130
+  offset: 0, 0
+  index: -1
+肩膀左
+  rotate: true
+  xy: 814, 125
+  size: 170, 143
+  orig: 170, 143
+  offset: 0, 0
+  index: -1

@@ -55,15 +55,15 @@
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Manipulators\Sequence\RectangleSelect.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\State\SequenceState.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Items\ClipItem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\TimelineSelection.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Undo\UndoExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\TimelineSelection.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Manipulators\AddDelete\IAddDeleteItemMode.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\MarkerModifier.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Window\TimelineWindow_Duration.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Tooltip.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Manipulators\Sequence\SelectAndMoveItem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Items\ItemsGroup.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\Scopes\LabelWidthScope.cs" />
+     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Items\ItemsGroup.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\TimelineUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Signals\SignalEmitterEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\State\ISequenceState.cs" />
@@ -209,11 +209,11 @@
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\TimeFormat.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\State\SequencePath.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Actions\ClipAction.cs" />
-     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\SpacePartitioner.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\Graphics.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Animation\AnimationTrackActions.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\treeview\TrackGui\InlineCurveEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Recording\TimelineRecording_PlayableAsset.cs" />
+     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\SpacePartitioner.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\inspectors\TimelineProjectSettings.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Trackhead.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Animation\CurveTreeViewNode.cs" />
@@ -246,8 +246,8 @@
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Manipulators\EditMode.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\treeview\Snapping\ISnappable.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\treeview\TimelineDataSource.cs" />
-     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Animation\AnimationOffsetMenu.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\CustomEditors\MarkerEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Animation\AnimationOffsetMenu.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\ClipModifier.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Signals\SignalReceiverHeader.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Window\OverlayDrawer.cs" />
@@ -298,8 +298,8 @@
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Playables\ControlPlayableInspector.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\treeview\Manipulator.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Window\TimelineWindow_TrackGui.cs" />
-     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\ObjectReferenceField.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\Clipboard.cs" />
+     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\ObjectReferenceField.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Utilities\TimeReferenceUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\treeview\TrackGui\TimelineTrackGUI.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\State\SequenceHierarchy.cs" />
@@ -624,11 +624,17 @@
      <Reference Include="Markdig">
      <HintPath>D:\Projects\ThurderCooker\Assets\QFramework\Toolkits\_CoreKit\PackageKit\Markdown\Markdig.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     <Reference Include="log4netPlastic">
+     <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Analytics.StandardEvents">
      <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.analytics@3.6.12\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Plastic.Newtonsoft.Json">
+     <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
@@ -639,14 +645,8 @@
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
      <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="log4netPlastic">
-     <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Analytics.Tracker">
      <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
-     </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -1040,13 +1040,13 @@
       <Project>{31652673-27ae-5022-f862-c76f5c7c523b}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{67bc3808-e013-3ea7-469a-9c00444e0ab4}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
       <Project>{663c58c2-aeef-21ee-1739-93c9b8c9c6f8}</Project>
       <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{67bc3808-e013-3ea7-469a-9c00444e0ab4}</Project>
+      <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

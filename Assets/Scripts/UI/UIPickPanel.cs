@@ -7,7 +7,7 @@ namespace QFramework.ThunderCooker
 {
 	public class UIPickPanelData : UIPanelData
 	{
-		public string targetSceneName = "Level 1";
+		public string targetSceneName = "MAIN Level";
 	}
 	public partial class UIPickPanel : UIPanel, IController
 	{

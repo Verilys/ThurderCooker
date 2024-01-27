@@ -84,8 +84,8 @@
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Util\IRetryPolicy.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\ScriptingStoreCallback.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\AAR\GoogleFinishTransactionService.cs" />
-     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\ISkuDetailsResponseConsolidator.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\BaseStore\MetricizedJsonStore.cs" />
+     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\ISkuDetailsResponseConsolidator.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\AAR\Utils\AndroidJavaObjectWrapper.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\WindowsStore\IMicrosoftConfiguration.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\Interfaces\IGooglePlayConfiguration.cs" />
@@ -121,9 +121,9 @@
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\Interfaces\IGooglePlayStoreExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\AndroidStore.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\ISkuDetailsConverter.cs" />
-     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\FakeStore\LifecycleNotifier.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\AAR\SkuDetailsQueryResponse.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\AAR\Models\GooglePurchaseStateEnum.cs" />
+     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\FakeStore\LifecycleNotifier.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\AAR\Utils\GoogleReceiptEncoder.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\GooglePlayStoreExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime\Stores\Android\GooglePlay\GetGoogleProductMetadataExtension.cs" />
@@ -894,13 +894,13 @@
       <Project>{31652673-27ae-5022-f862-c76f5c7c523b}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{67bc3808-e013-3ea7-469a-9c00444e0ab4}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
       <Project>{663c58c2-aeef-21ee-1739-93c9b8c9c6f8}</Project>
       <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{67bc3808-e013-3ea7-469a-9c00444e0ab4}</Project>
+      <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

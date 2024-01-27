@@ -50,16 +50,19 @@
      <Compile Include="Assets\Scripts\UI\UIPreparePanel.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\ActionKitTests\ActionKit0_0_6Tests.cs" />
      <Compile Include="Assets\Scripts\UI\UISettingsPanel.cs" />
+     <Compile Include="Assets\Scripts\Game\CharacterSpineController.cs" />
      <Compile Include="Assets\Scripts\UI\UIPickPanel.cs" />
      <Compile Include="Assets\Scripts\UI\UIEndPanel.cs" />
      <Compile Include="Assets\QFrameworkTests\2.ResKitTests\ResKitV0_10_XTests.cs" />
      <Compile Include="Assets\Scripts\UI\UIEndPanel.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UIResultPanel.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UIGameFloatPanel.Designer.cs" />
+     <Compile Include="Assets\CustomRenderPassFeature.cs" />
      <Compile Include="Assets\Scripts\Command\PurchaseSuccessCommand.cs" />
      <Compile Include="Assets\Scripts\UI\UIGoldPrompt.cs" />
      <Compile Include="Assets\Scripts\UI\UIPreparePanel.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\SimpleRCTests.cs" />
+     <Compile Include="Assets\Scripts\Game\CharacterSpineController.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\PoolTests.cs" />
      <Compile Include="Assets\Scripts\Command\StartGameCommand.cs" />
      <Compile Include="Assets\Scripts\UI\UIResultPanel.cs" />
@@ -89,14 +92,13 @@
      <Compile Include="Assets\Scripts\UI\UISurePrompt.cs" />
      <Compile Include="Assets\Scripts\UI\UISurePrompt.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\UIKitV0_10_XTests.cs" />
-     <Compile Include="Assets\Scripts\Game\CharacterSpineController.Designer.cs" />
-     <Compile Include="Assets\Scripts\Game\CharacterSpineController.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\QFramework\Framework\PackageVersion.json" />
      <Folder Include="Library\PackageCache\com.unity.ads@4.4.2\Runtime" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\clientcommon.ja.txt" />
      <Folder Include="Assets\Spine" />
      <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization" />
@@ -104,8 +106,10 @@
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\i3.es.txt" />
      <None Include="Assets\Spine\version.txt" />
+     <Folder Include="Library\PackageCache\com.unity.searcher@4.9.1" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\semantic.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\workspaceserver.es.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -126,6 +130,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\basecommands.es.txt" />
      <Folder Include="Library\PackageCache\com.unity.analytics@3.6.12\Plugins" />
      <None Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\package.json" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12\Textures\SMAA" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.24\Rider" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\mergetool.es.txt" />
      <Folder Include="Assets\QFrameworkData\LiveCodingKit" />
@@ -153,6 +158,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\images.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\mergetool.zh-Hant.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0" />
+     <Folder Include="Library\PackageCache\com.unity.burst@1.8.4\Tests" />
      <Folder Include="Library\PackageCache\com.unity.ads@4.4.2\Tests" />
      <None Include="Assets\Resources\BillingMode.json" />
      <Folder Include="Assets\Resources" />
@@ -172,6 +178,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\cm.es.txt" />
      <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
+     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM" />
      <Folder Include="Assets\UI Toolkit\UnityThemes" />
@@ -201,12 +208,16 @@
      <Folder Include="Assets\Scenes\TestUIPanels" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\configurehelper.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12\Textures\FilmGrain" />
      <Folder Include="Library\PackageCache\com.unity.ads@4.4.2\Plugins\iOS" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\differences.en.txt" />
+     <Folder Include="Library\PackageCache\com.unity.burst@1.8.4" />
      <Folder Include="Assets\UI Toolkit" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\i3.en.txt" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\package.json" />
      <Folder Include="Assets\Scripts\Command" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.12\ValidationConfig.json" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.12\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\images.es.txt" />
@@ -217,6 +228,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@12.1.12\package.json" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\Art\Audio" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\plastic-gui.en.txt" />
@@ -225,11 +237,14 @@
      <Folder Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.24\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\commontypes.zh-Hant.txt" />
+     <None Include="Library\PackageCache\com.unity.searcher@4.9.1\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.video@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.analytics@3.6.12\AnalyticsStandardEvents" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@12.1.12\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\guihelp.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\workspaceserver.ko.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\images.en.txt" />
+     <Folder Include="Library\PackageCache\com.unity.shadergraph@12.1.12\Tests" />
      <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.physics@1.0.0" />
@@ -240,6 +255,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0" />
      <None Include="Library\PackageCache\com.unity.purchasing@4.9.3\package.json" />
      <Folder Include="Assets\QFrameworkTests\3.UIKitTests\Art\UIPrefab" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12" />
      <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\clientcommon.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\commontypes.es.txt" />
@@ -250,6 +266,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\images.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\clientcommon.en.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\guihelp.ja.txt" />
+     <Folder Include="Library\PackageCache\com.unity.shadergraph@12.1.12" />
      <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\guihelp.en.txt" />
@@ -290,9 +307,11 @@
      <Folder Include="Library\PackageCache\com.unity.purchasing@4.9.3\Icons" />
      <Folder Include="Library\PackageCache\com.unity.services.core@1.10.1\Runtime" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\commontypes.zh-Hans.txt" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12\Textures" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\basecommands.ja.txt" />
      <Folder Include="Assets\QFrameworkTests\4.AudioTests" />
      <Folder Include="Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.10\Tests" />
+     <Folder Include="Library\PackageCache\com.unity.mathematics@1.2.6" />
      <Folder Include="Assets\QFramework\Toolkits" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\FileSystemWatcherLicense.txt" />
      <Folder Include="Library\PackageCache\com.unity.purchasing@4.9.3\Plugins" />
@@ -313,7 +332,9 @@
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.5" />
      <Folder Include="Assets\QFrameworkTests\3.UIKitTests\Scripts" />
      <None Include="Assets\QFrameworkTests\3.UIKitTests\PackageVersion.json" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12\Textures\2D" />
      <Folder Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12\ValidationExceptions.json" />
      <None Include="Library\PackageCache\com.unity.ads@4.4.2\LICENSE.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\images.ko.txt" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
@@ -337,13 +358,16 @@
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.24" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.12" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
+     <Folder Include="Library\PackageCache\com.unity.searcher@4.9.1\Tests" />
      <Folder Include="Assets\QFrameworkTests\1.CoreTests\ActionKitTests" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\semantic.en.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\binmergetool.en.txt" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
      <Folder Include="Library\PackageCache\com.unity.purchasing@4.9.3\Runtime" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12\Textures\BlueNoise16" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\mergetool.en.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\clientcommon.es.txt" />
@@ -358,6 +382,7 @@
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_Properties.cginc" />
      <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.xml" />
      <Folder Include="Library\PackageCache\com.unity.analytics@3.6.12" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.12\Tests" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\i3.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\configurehelper.en.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\plastic-gui.zh-Hans.txt" />
@@ -398,6 +423,8 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\cm.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Editor" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0" />
+     <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12\Textures\BlueNoise16\L" />
+     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
      <Folder Include="Assets\QFrameworkTests\2.ResKitTests" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
@@ -417,9 +444,12 @@
      <Folder Include="Library\PackageCache\com.unity.ads@4.4.2\Tests\Editor" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\cm.ko.txt" />
      <Folder Include="Assets\QFrameworkData\ProjectConfig" />
+     <None Include="Library\PackageCache\com.unity.burst@1.8.4\Unity.Burst.Unsafe.xml" />
      <Folder Include="Library\PackageCache\com.unity.purchasing@4.9.3" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.12\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
+     <None Include="Library\PackageCache\com.unity.burst@1.8.4\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\configurehelper.es.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\xdiff.es.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0" />
@@ -681,6 +711,9 @@
      <Reference Include="Markdig">
      <HintPath>D:\Projects\ThurderCooker\Assets\QFramework\Toolkits\_CoreKit\PackageKit\Markdown\Markdig.dll</HintPath>
      </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Analytics.StandardEvents">
      <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.analytics@3.6.12\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
      </Reference>
@@ -689,9 +722,6 @@
      </Reference>
      <Reference Include="Unity.Analytics.Tracker">
      <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
-     </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>D:\Projects\ThurderCooker\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -1064,29 +1094,117 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{67bc3808-e013-3ea7-469a-9c00444e0ab4}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
       <Project>{663c58c2-aeef-21ee-1739-93c9b8c9c6f8}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
-    <ProjectReference Include="QFramework.CoreKit.csproj">
-      <Project>{e15bd15c-f6ca-f542-2896-f148d66a6241}</Project>
-      <Name>QFramework.CoreKit</Name>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{67bc3808-e013-3ea7-469a-9c00444e0ab4}</Project>
+      <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="Purchasing.Common.csproj">
       <Project>{857996ad-ac6b-d63e-8a61-cc356e3ca646}</Project>
       <Name>Purchasing.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-unity-examples-editor.csproj">
-      <Project>{cc68a7d0-3754-c972-e554-e2f69f13aed2}</Project>
-      <Name>spine-unity-examples-editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{a433a623-516c-b3d8-f127-3ca3dddc667a}</Project>
       <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{21dec205-72fa-c2ac-25b5-a66b18ff7c0c}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Purchasing.csproj">
+      <Project>{4b01deb7-edd0-f2b2-dd29-bf24527c9159}</Project>
+      <Name>UnityEngine.Purchasing</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{22194008-e02d-471d-0017-25f52e7282f5}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples.csproj">
+      <Project>{b60dd44e-3001-6391-33e5-94bf4390874b}</Project>
+      <Name>spine-unity-examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Purchasing.SecurityStub.csproj">
+      <Project>{59f581c0-4cd0-a933-0460-d4c15acdbdb1}</Project>
+      <Name>UnityEngine.Purchasing.SecurityStub</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Advertisements.csproj">
+      <Project>{178dc9e4-4257-6e9d-2c80-e13d4dbfbd76}</Project>
+      <Name>UnityEngine.Advertisements</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Searcher.Editor.csproj">
+      <Project>{39012094-6db4-67dc-670d-84d36e588d4b}</Project>
+      <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{76d2bd03-a31f-042e-add1-8df589ba4dc3}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{f851525d-9870-16d8-3d4c-d4e34aa10504}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{114cd19b-ba1b-cd76-798e-f962a66d00cc}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Analytics.csproj">
+      <Project>{437009ac-ad72-1411-479b-782ce5f45df4}</Project>
+      <Name>Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
+      <Project>{92bce348-26da-c297-2a88-ef82d9ab3389}</Project>
+      <Name>UnityEngine.SpatialTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{31652673-27ae-5022-f862-c76f5c7c523b}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Analytics.DataPrivacy.csproj">
+      <Project>{d0886be6-b228-bd23-22f4-46b1aeabc0cc}</Project>
+      <Name>Unity.Analytics.DataPrivacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="SupportOldQF.csproj">
+      <Project>{7eef8b77-3c57-7f0c-b670-a8561c6ce089}</Project>
+      <Name>SupportOldQF</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{605da2b9-bc99-7b32-6aa9-69be69b19cf5}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Purchasing.Codeless.csproj">
+      <Project>{f537a19b-a194-165d-aa8a-e649fb896839}</Project>
+      <Name>UnityEngine.Purchasing.Codeless</Name>
+    </ProjectReference>
+    <ProjectReference Include="AudioKit.csproj">
+      <Project>{70eb91bd-69e9-a8b6-f3cd-d85e57a8c872}</Project>
+      <Name>AudioKit</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{458f1751-f913-cff2-381a-1e0123f37f14}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{5b96d79a-138d-4e25-3912-2c00c1d0be0e}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="QFramework.csproj">
+      <Project>{439e91bd-428b-df7c-75b1-5c7a9296322a}</Project>
+      <Name>QFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-csharp.csproj">
+      <Project>{d198f075-96b8-f01c-784a-1116ee55cd16}</Project>
+      <Name>spine-csharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="QFramework.CoreKit.csproj">
+      <Project>{e15bd15c-f6ca-f542-2896-f148d66a6241}</Project>
+      <Name>QFramework.CoreKit</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{cc68a7d0-3754-c972-e554-e2f69f13aed2}</Project>
+      <Name>spine-unity-examples-editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
       <Project>{da99b8ed-e27d-cf5c-981e-720004403725}</Project>
@@ -1096,13 +1214,13 @@
       <Project>{0ca18e71-ccc9-653e-398a-2c1fa0340e60}</Project>
       <Name>ResKit</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Purchasing.csproj">
-      <Project>{4b01deb7-edd0-f2b2-dd29-bf24527c9159}</Project>
-      <Name>UnityEngine.Purchasing</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{a010730a-5709-0761-3b06-5efad97a6954}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{22194008-e02d-471d-0017-25f52e7282f5}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
+    <ProjectReference Include="PPv2URPConverters.csproj">
+      <Project>{8619048e-70a6-04a0-b555-1d8fb9b17875}</Project>
+      <Name>PPv2URPConverters</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{a75d7015-92db-771a-8487-497dfb05d6bd}</Project>
@@ -1120,25 +1238,17 @@
       <Project>{a4539f84-6cb4-37eb-65e5-b2bb6745b07b}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Purchasing.SecurityStub.csproj">
-      <Project>{59f581c0-4cd0-a933-0460-d4c15acdbdb1}</Project>
-      <Name>UnityEngine.Purchasing.SecurityStub</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Advertisements.csproj">
-      <Project>{178dc9e4-4257-6e9d-2c80-e13d4dbfbd76}</Project>
-      <Name>UnityEngine.Advertisements</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity-examples.csproj">
-      <Project>{b60dd44e-3001-6391-33e5-94bf4390874b}</Project>
-      <Name>spine-unity-examples</Name>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{12ad72fa-a447-1083-385e-15a73ac81b9e}</Project>
+      <Name>Unity.Burst.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
       <Project>{89780058-50e4-33bd-4e77-9ef9ac3053e2}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{76d2bd03-a31f-042e-add1-8df589ba4dc3}</Project>
-      <Name>UnityEditor.UI</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{8e82dfd1-16d7-4ce3-88dd-780af413fd01}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
       <Project>{4b6a2a7e-e1c2-296f-fa19-797d722fc368}</Project>
@@ -1148,53 +1258,33 @@
       <Project>{0f7b5d29-54a3-123b-e992-133f3d9550ba}</Project>
       <Name>UIKit</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{f851525d-9870-16d8-3d4c-d4e34aa10504}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Analytics.csproj">
-      <Project>{437009ac-ad72-1411-479b-782ce5f45df4}</Project>
-      <Name>Analytics</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{31652673-27ae-5022-f862-c76f5c7c523b}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
-      <Project>{92bce348-26da-c297-2a88-ef82d9ab3389}</Project>
-      <Name>UnityEngine.SpatialTracking</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.csproj">
       <Project>{d69df80c-8361-3fb1-0db8-b3d6198f5ee9}</Project>
       <Name>Unity.Services.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="SupportOldQF.csproj">
-      <Project>{7eef8b77-3c57-7f0c-b670-a8561c6ce089}</Project>
-      <Name>SupportOldQF</Name>
     </ProjectReference>
     <ProjectReference Include="ResKit.Editor.csproj">
       <Project>{1fc13240-91a2-42e4-05b1-a9e6b3f6bb98}</Project>
       <Name>ResKit.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Analytics.DataPrivacy.csproj">
-      <Project>{d0886be6-b228-bd23-22f4-46b1aeabc0cc}</Project>
-      <Name>Unity.Analytics.DataPrivacy</Name>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{a758e091-93b3-001c-ed79-0e9507e76031}</Project>
+      <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
       <Project>{7c1ce30d-ea06-2ba2-5acf-f66d288a2cf2}</Project>
       <Name>Unity.Services.Core.Analytics</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{b7cac619-a8f5-77e5-73e4-9248bcd43900}</Project>
+      <Name>Unity.Burst</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.Purchasing.SecurityCore.csproj">
       <Project>{36b4979d-abd4-9624-e6ab-38442e72f36c}</Project>
       <Name>UnityEngine.Purchasing.SecurityCore</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Purchasing.Codeless.csproj">
-      <Project>{f537a19b-a194-165d-aa8a-e649fb896839}</Project>
-      <Name>UnityEngine.Purchasing.Codeless</Name>
-    </ProjectReference>
-    <ProjectReference Include="AudioKit.csproj">
-      <Project>{70eb91bd-69e9-a8b6-f3cd-d85e57a8c872}</Project>
-      <Name>AudioKit</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{e2ea826f-2012-b5e9-3714-57a15af006de}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
       <Project>{8d79b20d-da23-f1b4-0e8d-21a529191240}</Project>
@@ -1208,6 +1298,10 @@
       <Project>{c26b8afc-19f4-f683-2e4d-7322555e7ba0}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{0cf0699f-1151-3860-4d17-ea1be3d15160}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.Purchasing.Stores.csproj">
       <Project>{0dcd59f6-5b03-ae03-3be9-37d2e798fb2b}</Project>
       <Name>UnityEngine.Purchasing.Stores</Name>
@@ -1219,10 +1313,6 @@
     <ProjectReference Include="UIKit.Editor.csproj">
       <Project>{8b36b0bb-9e94-b5b3-0def-f3f74636adf2}</Project>
       <Name>UIKit.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="QFramework.csproj">
-      <Project>{439e91bd-428b-df7c-75b1-5c7a9296322a}</Project>
-      <Name>QFramework</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.Purchasing.csproj">
       <Project>{dcfe3c5d-ea1f-138e-4da4-f74640704c83}</Project>
@@ -1236,13 +1326,13 @@
       <Project>{8f256fa2-c8bb-0e6b-eb3b-fd19d7450121}</Project>
       <Name>UnityEditor.SpatialTracking</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-csharp.csproj">
-      <Project>{d198f075-96b8-f01c-784a-1116ee55cd16}</Project>
-      <Name>spine-csharp</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.Advertisements.Editor.csproj">
       <Project>{098809ac-cd14-3ebf-6ba2-05eb23350b11}</Project>
       <Name>UnityEngine.Advertisements.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{80a3a7ab-2ec4-f5b1-f67f-53ecc3a4971c}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
