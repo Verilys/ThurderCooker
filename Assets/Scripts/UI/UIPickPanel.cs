@@ -1,33 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using UnityEngine.SceneManagement;
 
 namespace QFramework.ThunderCooker
 {
-	public class UIGameFloatPanelData : UIPanelData
+	public class UIPickPanelData : UIPanelData
 	{
-		public int actTurn = 1;
+		public string targetSceneName = "Level 1";
 	}
-	public partial class UIGameFloatPanel : UIPanel
+	public partial class UIPickPanel : UIPanel
 	{
 		protected override void OnInit(IUIData uiData = null)
 		{
-			mData = uiData as UIGameFloatPanelData ?? new UIGameFloatPanelData();
+			mData = uiData as UIPickPanelData ?? new UIPickPanelData();
 			// please add init code here
 			nextBtn.onClick.AddListener((() =>
 			{
-				if (mData.actTurn == 3)
-				{
-					UIKit.OpenPanel<UIResultPanel>();
-					this.Hide();	
-				}
-				else
-				{
-					
-					mData.actTurn++;
-				}
-				
+				UIKit.OpenPanel<UIGameFloatPanel>(UILevel.PopUI);
+				SceneManager.LoadScene(mData.targetSceneName);
+				this.CloseSelf();				
 			}));
+
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)

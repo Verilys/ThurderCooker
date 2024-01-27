@@ -4,30 +4,15 @@ using QFramework;
 
 namespace QFramework.ThunderCooker
 {
-	public class UIGameFloatPanelData : UIPanelData
+	public class UISurePromptData : UIPanelData
 	{
-		public int actTurn = 1;
 	}
-	public partial class UIGameFloatPanel : UIPanel
+	public partial class UISurePrompt : UIPanel
 	{
 		protected override void OnInit(IUIData uiData = null)
 		{
-			mData = uiData as UIGameFloatPanelData ?? new UIGameFloatPanelData();
+			mData = uiData as UISurePromptData ?? new UISurePromptData();
 			// please add init code here
-			nextBtn.onClick.AddListener((() =>
-			{
-				if (mData.actTurn == 3)
-				{
-					UIKit.OpenPanel<UIResultPanel>();
-					this.Hide();	
-				}
-				else
-				{
-					
-					mData.actTurn++;
-				}
-				
-			}));
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)

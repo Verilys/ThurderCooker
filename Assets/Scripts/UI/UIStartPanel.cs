@@ -16,6 +16,8 @@ namespace QFramework.ThunderCooker
 			startBtn.onClick.AddListener(() =>
 			{
 				Debug.Log("start game");
+				UIKit.OpenPanel<UITutorialPanel>();
+				this.CloseSelf();
 			});
 			settingBtn.onClick.AddListener((() =>
 			{

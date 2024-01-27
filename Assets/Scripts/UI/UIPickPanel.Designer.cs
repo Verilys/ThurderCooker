@@ -5,27 +5,24 @@ using QFramework;
 
 namespace QFramework.ThunderCooker
 {
-	// Generate Id:51a5dc74-5e87-4755-a5a1-d2f8b8d36fa4
-	public partial class UIGameFloatPanel
+	// Generate Id:44b7e651-b1d1-448c-bb84-d6f12d4ed7f5
+	public partial class UIPickPanel
 	{
-		public const string Name = "UIGameFloatPanel";
+		public const string Name = "UIPickPanel";
 		
-		[SerializeField]
-		public TMPro.TextMeshProUGUI txtVersion;
 		[SerializeField]
 		public UnityEngine.UI.Button nextBtn;
 		
-		private UIGameFloatPanelData mPrivateData = null;
+		private UIPickPanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
-			txtVersion = null;
 			nextBtn = null;
 			
 			mData = null;
 		}
 		
-		public UIGameFloatPanelData Data
+		public UIPickPanelData Data
 		{
 			get
 			{
@@ -33,11 +30,11 @@ namespace QFramework.ThunderCooker
 			}
 		}
 		
-		UIGameFloatPanelData mData
+		UIPickPanelData mData
 		{
 			get
 			{
-				return mPrivateData ?? (mPrivateData = new UIGameFloatPanelData());
+				return mPrivateData ?? (mPrivateData = new UIPickPanelData());
 			}
 			set
 			{

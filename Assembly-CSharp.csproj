@@ -42,15 +42,27 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\QFrameworkTests\4.AudioTests\AudioKitV0_9_XTests.cs" />
+     <Compile Include="Assets\Scripts\UI\UITutorialPanel.Designer.cs" />
+     <Compile Include="Assets\Scripts\UI\UITutorialPanel.cs" />
      <Compile Include="Assets\QFrameworkTests\4.AudioTests\AudioKitV0_8_XTests.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI\UIKitTestPanel2.Designer.cs" />
+     <Compile Include="Assets\Scripts\UI\UIPreparePanel.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\ActionKitTests\ActionKit0_0_6Tests.cs" />
      <Compile Include="Assets\Scripts\UI\UISettingsPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\UIPickPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\UIEndPanel.cs" />
      <Compile Include="Assets\QFrameworkTests\2.ResKitTests\ResKitV0_10_XTests.cs" />
+     <Compile Include="Assets\Scripts\UI\UIEndPanel.Designer.cs" />
+     <Compile Include="Assets\Scripts\UI\UIResultPanel.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UIGameFloatPanel.Designer.cs" />
+     <Compile Include="Assets\Scripts\UI\UIGoldPPrompt.cs" />
+     <Compile Include="Assets\Scripts\UI\UIPreparePanel.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\SimpleRCTests.cs" />
      <Compile Include="Assets\QFrameworkTests\1.CoreTests\PoolTests.cs" />
+     <Compile Include="Assets\Scripts\UI\UIResultPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\UIPickPanel.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI\UIKitTestPanel.Designer.cs" />
+     <Compile Include="Assets\Scripts\UI\UIGoldPPrompt.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UISettingsPanel.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UIStartPanel.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\0.FluentAPI\ListPoolTest.cs" />
@@ -61,6 +73,8 @@
      <Compile Include="Assets\Scripts\Game\GameApp.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\Scripts\UI\UIKitTestPanel.cs" />
      <Compile Include="Assets\Scripts\UI\UIStartPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\UISurePrompt.cs" />
+     <Compile Include="Assets\Scripts\UI\UISurePrompt.Designer.cs" />
      <Compile Include="Assets\Scripts\Game\GameApp.Designer.cs" />
      <Compile Include="Assets\QFrameworkTests\3.UIKitTests\UIKitV0_10_XTests.cs" />
      <Folder Include="Assets" />

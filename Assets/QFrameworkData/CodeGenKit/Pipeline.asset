@@ -18,12 +18,36 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos: []
+    BindInfos:
+    - TypeName: TMPro.TextMeshProUGUI
+      PathToRoot: GoalPanel/txtScores
+      MemberName: txtScores
+    - TypeName: UnityEngine.UI.Button
+      PathToRoot: GoalPanel/Options/actorsShopBtn
+      MemberName: actorsShopBtn
+    - TypeName: UnityEngine.UI.Button
+      PathToRoot: GoalPanel/Options/propsShopBtn
+      MemberName: propsShopBtn
+    - TypeName: UnityEngine.UI.Button
+      PathToRoot: GoalPanel/Options/startPickBtn
+      MemberName: startPickBtn
+    - TypeName: UnityEngine.UI.Button
+      PathToRoot: PorpsPanel/pBackBtn
+      MemberName: pBackBtn
+    - TypeName: UnityEngine.UI.Button
+      PathToRoot: ActorsPanel/aBackBtn
+      MemberName: aBackBtn
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: GameApp
+    ClassName: UIPreparePanel
     Namespace: QFramework.ThunderCooker
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace QFramework.ThunderCooker\r\n{\r\n\tpublic
-      partial class GameApp : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class UIPreparePanel : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:d07b6544-ca36-4dd1-8ab8-2ed0cd4b34be\r\nusing UnityEngine;\r\n\r\nnamespace
-      QFramework.ThunderCooker\r\n{\r\n\tpublic partial class GameApp\r\n\t{\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:872dfbe0-a4fb-4a9e-a412-73389e64616b\r\nusing UnityEngine;\r\n\r\nnamespace
+      QFramework.ThunderCooker\r\n{\r\n\tpublic partial class UIPreparePanel\r\n\t{\r\n\r\n\t\tpublic
+      TMPro.TextMeshProUGUI txtScores;\r\n\r\n\t\tpublic UnityEngine.UI.Button actorsShopBtn;\r\n\r\n\t\tpublic
+      UnityEngine.UI.Button propsShopBtn;\r\n\r\n\t\tpublic UnityEngine.UI.Button
+      startPickBtn;\r\n\r\n\t\tpublic UnityEngine.UI.Button pBackBtn;\r\n\r\n\t\tpublic
+      UnityEngine.UI.Button aBackBtn;\r\n\r\n\t\tpublic UnityEngine.GameObject GoalPanel;\r\n\r\n\t\tpublic
+      UnityEngine.GameObject PorpsPanel;\r\n\r\n\t\tpublic UnityEngine.GameObject
+      ActorsPanel;\r\n\r\n\t}\r\n}\r\n"

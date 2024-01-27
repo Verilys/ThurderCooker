@@ -4,29 +4,19 @@ using QFramework;
 
 namespace QFramework.ThunderCooker
 {
-	public class UIGameFloatPanelData : UIPanelData
+	public class UITutorialPanelData : UIPanelData
 	{
-		public int actTurn = 1;
 	}
-	public partial class UIGameFloatPanel : UIPanel
+	public partial class UITutorialPanel : UIPanel
 	{
 		protected override void OnInit(IUIData uiData = null)
 		{
-			mData = uiData as UIGameFloatPanelData ?? new UIGameFloatPanelData();
+			mData = uiData as UITutorialPanelData ?? new UITutorialPanelData();
 			// please add init code here
 			nextBtn.onClick.AddListener((() =>
 			{
-				if (mData.actTurn == 3)
-				{
-					UIKit.OpenPanel<UIResultPanel>();
-					this.Hide();	
-				}
-				else
-				{
-					
-					mData.actTurn++;
-				}
-				
+				UIKit.OpenPanel<UIPreparePanel>();
+				this.CloseSelf();
 			}));
 		}
 		
