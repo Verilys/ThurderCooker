@@ -5,15 +5,19 @@ using QFramework;
 
 namespace QFramework.ThunderCooker
 {
-	// Generate Id:f32e919f-f65a-450e-8d6a-24ad52945f5c
+	// Generate Id:49b758b8-9da1-4c7b-a03d-799d4a10aa64
 	public partial class UIResultPanel
 	{
 		public const string Name = "UIResultPanel";
 		
 		[SerializeField]
-		public TMPro.TextMeshProUGUI txt_income;
+		public TMPro.TextMeshProUGUI txtDays;
 		[SerializeField]
-		public TMPro.TextMeshProUGUI txt_icome;
+		public TMPro.TextMeshProUGUI txt_income1;
+		[SerializeField]
+		public TMPro.TextMeshProUGUI txt_income2;
+		[SerializeField]
+		public TMPro.TextMeshProUGUI txt_income3;
 		[SerializeField]
 		public UnityEngine.UI.Button nextBtn;
 		
@@ -21,8 +25,10 @@ namespace QFramework.ThunderCooker
 		
 		protected override void ClearUIComponents()
 		{
-			txt_income = null;
-			txt_icome = null;
+			txtDays = null;
+			txt_income1 = null;
+			txt_income2 = null;
+			txt_income3 = null;
 			nextBtn = null;
 			
 			mData = null;

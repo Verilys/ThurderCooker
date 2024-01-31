@@ -1,0 +1,62 @@
+
+西红柿（拆）.png
+size: 1127,568
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Armleft
+  rotate: false
+  xy: 987, 147
+  size: 70, 174
+  orig: 70, 174
+  offset: 0, 0
+  index: -1
+Armright
+  rotate: false
+  xy: 1059, 138
+  size: 66, 183
+  orig: 66, 183
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 860, 323
+  size: 254, 243
+  orig: 254, 243
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 4
+  size: 856, 562
+  orig: 856, 562
+  offset: 0, 0
+  index: -1
+Legleft
+  rotate: false
+  xy: 975, 2
+  size: 68, 143
+  orig: 68, 143
+  offset: 0, 0
+  index: -1
+Legright
+  rotate: false
+  xy: 1045, 8
+  size: 64, 128
+  orig: 64, 128
+  offset: 0, 0
+  index: -1
+Shoulderleft
+  rotate: false
+  xy: 860, 27
+  size: 113, 144
+  orig: 113, 144
+  offset: 0, 0
+  index: -1
+Shoulderright
+  rotate: false
+  xy: 860, 173
+  size: 125, 148
+  orig: 125, 148
+  offset: 0, 0
+  index: -1

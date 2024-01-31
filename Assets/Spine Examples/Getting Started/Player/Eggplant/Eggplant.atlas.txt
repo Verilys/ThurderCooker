@@ -1,0 +1,83 @@
+
+Eggplant.png
+size: 1052,535
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Armleft
+  rotate: true
+  xy: 933, 253
+  size: 116, 109
+  orig: 116, 109
+  offset: 0, 0
+  index: -1
+Armright
+  rotate: true
+  xy: 946, 22
+  size: 145, 83
+  orig: 145, 83
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 2, 2
+  size: 531, 796
+  orig: 531, 796
+  offset: 0, 0
+  index: -1
+Forearmleft
+  rotate: false
+  xy: 800, 64
+  size: 144, 103
+  orig: 144, 103
+  offset: 0, 0
+  index: -1
+Forearmright
+  rotate: false
+  xy: 950, 169
+  size: 83, 82
+  orig: 83, 82
+  offset: 0, 0
+  index: -1
+Handleft
+  rotate: true
+  xy: 800, 5
+  size: 57, 83
+  orig: 57, 83
+  offset: 0, 0
+  index: -1
+Handright
+  rotate: false
+  xy: 885, 17
+  size: 26, 45
+  orig: 26, 45
+  offset: 0, 0
+  index: -1
+Thighleft
+  rotate: false
+  xy: 800, 371
+  size: 147, 162
+  orig: 147, 162
+  offset: 0, 0
+  index: -1
+Thighright
+  rotate: true
+  xy: 800, 236
+  size: 133, 131
+  orig: 133, 131
+  offset: 0, 0
+  index: -1
+Thinleft
+  rotate: false
+  xy: 949, 388
+  size: 101, 145
+  orig: 101, 145
+  offset: 0, 0
+  index: -1
+Thinright
+  rotate: true
+  xy: 800, 169
+  size: 65, 148
+  orig: 65, 148
+  offset: 0, 0
+  index: -1

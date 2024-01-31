@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4634903024664689352}
   - component: {fileID: 4634903024664689353}
   - component: {fileID: 4634903024664689351}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,14 +58,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4634903024664689355}
-  m_LocalRotation: {x: -0, y: -0.26548144, z: -0, w: 0.96411604}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 6.6999984, y: 1, z: -1.4999996}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.59, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7254648484420354722}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -30.791, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &4634903024664689352
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -125,11 +125,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 4634903024664689355}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.8
-  m_Height: 1.21
+  m_Enabled: 0
+  m_Radius: 1.75
+  m_Height: 7.48
   m_Direction: 2
-  m_Center: {x: 2.95, y: 0.00000011920929, z: -3.18}
+  m_Center: {x: -0.61, y: -0.01, z: -1.27}
 --- !u!1 &4634903025859576221
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 5, z: 10.000002}
+  m_Size: {x: 10, y: 10, z: 10.000002}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4634903025859576213
 MonoBehaviour:
@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 335613dff585741248dce0115c6693fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemInfo: {fileID: 0}
   playerController: {fileID: 0}
   meshCollider: {fileID: 4634903025859576214}
   rb: {fileID: 4634903025859576220}

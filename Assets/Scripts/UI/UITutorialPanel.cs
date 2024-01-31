@@ -15,6 +15,8 @@ namespace QFramework.ThunderCooker
 			// please add init code here
 			nextBtn.onClick.AddListener((() =>
 			{
+				AudioKit.PlaySound("shopping");
+				AudioKit.PlayMusic("幕前准备BGM",true);
 				UIKit.OpenPanel<UIPreparePanel>();
 				this.CloseSelf();
 			}));

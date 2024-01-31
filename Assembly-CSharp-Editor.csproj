@@ -42,6 +42,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitCreateService\Editor\UIKitCreateServiceView.cs" />
+     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+     <Folder Include="Assets\TutorialInfo\Scripts\Editor" />
      <Folder Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitCreateService\Editor" />
      <Folder Include="Assets\Editor" />
      <None Include="Assets\QFramework\Toolkits\SupportOldQF\UIKitCreateService\Editor\packagekitconfig.json" />

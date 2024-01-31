@@ -9,7 +9,6 @@ namespace QFramework.ThunderCooker
     public class GameAppController : MonoBehaviour, IController
     {
         private static GameAppController instance;
-        private DataModel mModel;
         
         private void Awake()
         {
@@ -30,8 +29,7 @@ namespace QFramework.ThunderCooker
 
         void Start()
         {
-            mModel = this.GetModel<DataModel>();
-            
+            AudioKit.PlayMusic("首页教程BGM",true);
         }
         void Update()
         {

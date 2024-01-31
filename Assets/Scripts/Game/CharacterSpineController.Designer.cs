@@ -6,6 +6,7 @@ namespace QFramework.ThunderCooker
 {
 	public partial class CharacterSpineController
 	{
-		public List<GameObject> SpineCharacters; 
+		public List<GameObject> spineCharacters;
+		public List<GameObject> usingItems;
 	}
 }

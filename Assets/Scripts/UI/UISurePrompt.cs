@@ -6,6 +6,8 @@ namespace QFramework.ThunderCooker
 {
 	public class UISurePromptData : UIPanelData
 	{
+		public GameObject mCurrentActor;
+		public CharacterController mController;
 	}
 	public partial class UISurePrompt : UIPanel, IController
 	{
@@ -18,31 +20,39 @@ namespace QFramework.ThunderCooker
 
 			yesBtn.onClick.AddListener((() =>
 			{
-				UIPreparePanel mPrepare = UIKit.GetPanel<UIPreparePanel>();
-				UIActorProperty mActor = mPrepare.currentActor.GetComponent<UIActorProperty>();
-				Debug.Log(mActor.name+"钱"+mActor.price);
-				// 检查玩家是否有足够的金币购买角色
-				if (mModel.Coins >= mActor.price)
+				foreach (var actor in mModel.actorShopList)
 				{
-					// 扣除金币
-					mModel.Coins -= mActor.price;
-					
-					// 将角色从商店移动到已购买库
-					mPrepare.controller.PurchaseCharacter(mPrepare.currentActor);
-					mPrepare.controller.UpdateUI();
-					Debug.Log("购买成功！");
-					UIKit.GetPanel<UIPreparePanel>().txt_money.text = mModel.Coins.ToString();
-				}
-				else
-				{
-					UIKit.OpenPanel<UIGoldPrompt>();
-					Debug.Log("购买失败！");
+					if (actor.avatarName == mData.mCurrentActor.name)
+					{
+						Debug.Log(mData.mCurrentActor.name+"钱"+ actor.price);
+						// 检查玩家是否有足够的金币购买角色
+						if (mModel.Coins >= actor.price)
+	                    {
+	                        // 扣除金币
+	                        mModel.Coins -= actor.price;
+	                        
+	                        // 将角色从商店移动到已购买库
+	                        mData.mController.PurchaseCharacter(actor);
+	                        mData.mCurrentActor.GetComponent<Button>().interactable = false;
+	                       
+	                        Debug.Log("购买成功！");
+	                        AudioKit.PlaySound("buy");
+	                        UIKit.GetPanel<UIPreparePanel>().txt_money.text = mModel.Coins.ToString();
+	                    }
+	                    else
+	                    {
+	                        UIKit.OpenPanel<UIGoldPrompt>();
+	                        Debug.Log("购买失败！");
+	                    }
+						break;
+					}
 				}
 				this.CloseSelf();
 			}));
 			
 			noBtn.onClick.AddListener((() =>
 			{
+				AudioKit.PlaySound("click");
 				this.CloseSelf();
 			}));
 		}
@@ -62,6 +72,7 @@ namespace QFramework.ThunderCooker
 		
 		protected override void OnClose()
 		{
+			
 		}
 		public IArchitecture GetArchitecture()
 		{

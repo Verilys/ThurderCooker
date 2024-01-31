@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
@@ -7,11 +9,13 @@ namespace QFramework.ThunderCooker
 {
 	public class UIPreparePanelData : UIPanelData
 	{
+		
 	}
 	public partial class UIPreparePanel : UIPanel, IController
 	{
 		protected override void OnInit(IUIData uiData = null)
 		{
+			startPickBtn.interactable= false;
 			mData = uiData as UIPreparePanelData ?? new UIPreparePanelData();
 			// please add init code here
 			var mModel = this.GetModel<DataModel>();
@@ -20,28 +24,34 @@ namespace QFramework.ThunderCooker
 			if (foundObject != null)
 			{
 				Debug.Log("找到物体：" + foundObject.name);
-				controller = foundObject.GetComponent<CharacterController>();
-				foreach (var actor in controller.shopCharacters)
+				controller = foundObject.GetComponent<CharacterController>(); 
+				HashSet<string> nameHashSet = new HashSet<string>(mModel.actorShopList.Select(actor => actor.avatarName));
+				foreach (var ui_actor in controller.ui_Characters)
                 {
-                    //实例化角色
-                    currentActor = Instantiate(actor, actors);
-                    currentActor.name = actor.GetComponent<UIActorProperty>().name;
-                    Button purchaseBtn = currentActor.GetComponent<Button>();
-                    bool isPurchase = currentActor.GetComponent<UIActorProperty>().isPurchase;
-                    //如果人物按钮已经被购买
-                    if (isPurchase)
-                    {
-	                    purchaseBtn.interactable = false;
-                    }
-                    else
-                    {
-	                    purchaseBtn.onClick.AddListener(() =>
-	                    {
-		                    currentActor = purchaseBtn.gameObject;
-		                    UIKit.OpenPanel<UISurePrompt>();
-		                    //this.SendCommand<PurchaseCommand>();
-	                    });    
-                    }
+	                //实例化ui角色
+	                currentActor = Instantiate(ui_actor, actors);
+	                currentActor.name = ui_actor.name;
+	                Button purchaseBtn = currentActor.GetComponent<Button>();
+	                // 检查名字是否存在于哈希集合中
+	                if (nameHashSet.Contains(currentActor.name))
+	                {
+		                Debug.Log("在商店中，添加按钮监听"+currentActor.name);
+		                
+						purchaseBtn.onClick.AddListener(() =>
+                        {
+                            AudioKit.PlaySound("click");
+                            Debug.Log("当前选择角色是" + purchaseBtn.gameObject.name);
+                            UIKit.OpenPanel<UISurePrompt>(new UISurePromptData()
+                            {
+	                            mCurrentActor = purchaseBtn.gameObject,mController = controller
+                            });
+                            //this.SendCommand<PurchaseCommand>();
+                        });        
+	                }
+	                else
+	                {
+		                purchaseBtn.interactable = false;
+	                }
 
                 }
 			}
@@ -52,24 +62,30 @@ namespace QFramework.ThunderCooker
 			
 			startPickBtn.onClick.AddListener((() =>
             {
+	            AudioKit.PlaySound("click");
             	UIKit.OpenPanel<UIPickPanel>();
             	this.CloseSelf();
             }));
 			SwitchState(1);
 			propsShopBtn.onClick.AddListener((() =>
 			{
+				AudioKit.PlaySound("click");
 				SwitchState(2);
 			}));
 			actorsShopBtn.onClick.AddListener((() =>
 			{
+				startPickBtn.interactable= true;
+				AudioKit.PlaySound("click");
 				SwitchState(3);
 			}));
 			pBackBtn.onClick.AddListener((() =>
 			{
+				AudioKit.PlaySound("click");
 				SwitchState(1);
 			}));
 			aBackBtn.onClick.AddListener((() =>
 			{
+				AudioKit.PlaySound("click");
 				SwitchState(1);
 			}));
 		}

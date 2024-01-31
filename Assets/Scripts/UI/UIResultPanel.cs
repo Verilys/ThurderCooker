@@ -16,28 +16,35 @@ namespace QFramework.ThunderCooker
 			mData = uiData as UIResultPanelData ?? new UIResultPanelData();
 			
 			var gameModel = this.GetModel<DataModel>();
-			
+			txtDays.text = "剩余天数：" + (gameModel.Days - 1);
 			// please add init code here
 			nextBtn.onClick.AddListener((() =>
 			{
+				AudioKit.PlaySound("click");
 				gameModel.Days--;
-				Debug.Log("剩余天数："+gameModel.Days);
+				txtDays.text = "剩余天数：" + (gameModel.Days -1);
 				
 				if (gameModel.Days == 0)
 				{
 					if (gameModel.Scores >= mData.targetScore)
 					{
+						AudioKit.PlaySound("success");
+						AudioKit.PauseMusic();
 						gameModel.isWin = true;
 					}
 					else
 					{
+						AudioKit.PlaySound("fail");
+						AudioKit.PauseMusic();
 						gameModel.isWin = false;
 					}
 					SceneManager.LoadScene("Prepare");
+					
 					UIKit.OpenPanel<UIEndPanel>();	
 				}
 				else
 				{
+					AudioKit.PlayMusic("幕前准备BGM",true);
 					SceneManager.LoadScene("Prepare");
 					UIKit.OpenPanel<UIPreparePanel>();
 				}

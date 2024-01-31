@@ -11,7 +11,7 @@ namespace QFramework.ThunderCooker
             gameModel.Days = 3;
             gameModel.Coins = 10;
             gameModel.Scores = 0;
-            SceneManager.LoadScene("Prepare");
+            SceneManager.LoadScene("Level 1");
             this.SendEvent<GameStartEvent>();
             
         }

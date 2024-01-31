@@ -17,6 +17,7 @@ namespace QFramework.ThunderCooker
 			startBtn.onClick.AddListener(() =>
 			{
 				Debug.Log("start game");
+				AudioKit.PlaySound("click");
 				this.SendCommand<StartGameCommand>();
 				
 				UIKit.OpenPanel<UITutorialPanel>();
@@ -24,11 +25,13 @@ namespace QFramework.ThunderCooker
 			});
 			settingBtn.onClick.AddListener((() =>
 			{
+				AudioKit.PlaySound("click");
 				UIKit.OpenPanel<UISettingsPanel>();
 				this.CloseSelf();
 			}));
 			exitBtn.onClick.AddListener((() =>
 			{
+				AudioKit.PlaySound("click");
 #if UNITY_EDITOR
 				UnityEditor.EditorApplication.isPlaying = false;
 #else

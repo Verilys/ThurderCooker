@@ -1,0 +1,62 @@
+
+电饭煲（拆）.png
+size: 1425,382
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Armleft
+  rotate: false
+  xy: 1179, 32
+  size: 79, 178
+  orig: 79, 178
+  offset: 0, 0
+  index: -1
+Armright
+  rotate: false
+  xy: 1359, 217
+  size: 64, 163
+  orig: 64, 163
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 670, 26
+  size: 507, 354
+  orig: 507, 354
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 2
+  size: 666, 378
+  orig: 666, 378
+  offset: 0, 0
+  index: -1
+Legleft
+  rotate: false
+  xy: 1260, 58
+  size: 76, 146
+  orig: 76, 146
+  offset: 0, 0
+  index: -1
+Legright
+  rotate: false
+  xy: 1338, 67
+  size: 79, 137
+  orig: 79, 137
+  offset: 0, 0
+  index: -1
+Shoulderleft
+  rotate: false
+  xy: 1179, 212
+  size: 96, 168
+  orig: 96, 168
+  offset: 0, 0
+  index: -1
+Shoulderright
+  rotate: false
+  xy: 1277, 206
+  size: 80, 174
+  orig: 80, 174
+  offset: 0, 0
+  index: -1

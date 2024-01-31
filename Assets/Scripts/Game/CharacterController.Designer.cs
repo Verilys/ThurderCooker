@@ -8,11 +8,13 @@ namespace QFramework.ThunderCooker
 {
 	public partial class CharacterController
 	{
-		public List<GameObject> shopCharacters; // 商店中的角色预制体列表
-		public List<GameObject> purchasedCharacters; // 已购买的角色列表
-		public List<GameObject> backpackCharacters; // 背包中的角色列表 
+		public List<GameObject> ui_Characters = new List<GameObject>(); // 商店中的角色预制体列表
+		public List<GameObject> spineCharacters = new List<GameObject>();
 
-		// public List<Button> shopCharactersBtn;
-		// public List<Button> purchasedCharactersBtn;
+		public GameObject characters;
+		public List<GameObject> packCharacters = new List<GameObject>();
+		
+		public List<GameObject> usingItems = new List<GameObject>();
+		
 	}
 }

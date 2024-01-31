@@ -1,0 +1,83 @@
+
+垃圾桶分层.png
+size: 948,583
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Armleft
+  rotate: false
+  xy: 852, 98
+  size: 43, 142
+  orig: 43, 142
+  offset: 0, 0
+  index: -1
+Armright
+  rotate: false
+  xy: 780, 33
+  size: 50, 118
+  orig: 50, 118
+  offset: 0, 0
+  index: -1
+Forearmleft
+  rotate: false
+  xy: 780, 153
+  size: 70, 101
+  orig: 70, 101
+  offset: 0, 0
+  index: -1
+Forearmright
+  rotate: false
+  xy: 780, 396
+  size: 106, 96
+  orig: 106, 96
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 2
+  size: 776, 579
+  orig: 776, 579
+  offset: 0, 0
+  index: -1
+Shoulderleft
+  rotate: false
+  xy: 897, 124
+  size: 49, 116
+  orig: 49, 116
+  offset: 0, 0
+  index: -1
+Shoulderright
+  rotate: true
+  xy: 832, 55
+  size: 41, 112
+  orig: 41, 112
+  offset: 0, 0
+  index: -1
+Thighleft
+  rotate: false
+  xy: 888, 371
+  size: 54, 121
+  orig: 54, 121
+  offset: 0, 0
+  index: -1
+Thighright
+  rotate: false
+  xy: 852, 242
+  size: 66, 127
+  orig: 66, 127
+  offset: 0, 0
+  index: -1
+Thinleft
+  rotate: true
+  xy: 780, 494
+  size: 87, 162
+  orig: 87, 162
+  offset: 0, 0
+  index: -1
+Thinright
+  rotate: false
+  xy: 780, 256
+  size: 70, 138
+  orig: 70, 138
+  offset: 0, 0
+  index: -1

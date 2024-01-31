@@ -19,6 +19,7 @@ namespace QFramework.ThunderCooker
 			nextBtn.onClick.AddListener((() =>
 			{
 				Debug.Log($"下一幕是第{mData.actTurn}幕");
+				AudioKit.PlaySound("click");
 				if (mData.actTurn == 3)
 				{
 					UIKit.OpenPanel<UIResultPanel>();

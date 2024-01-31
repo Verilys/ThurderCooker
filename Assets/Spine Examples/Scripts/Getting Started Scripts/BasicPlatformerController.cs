@@ -53,6 +53,7 @@ public class BasicPlatformerController : MonoBehaviour
 	}
 
 	public bool isControlled;
+	public Character character;
 
     [Header("Components")]
 	public CharacterController controller;
@@ -70,6 +71,8 @@ public class BasicPlatformerController : MonoBehaviour
 	public GrabbableItem handledItem;
     public Transform handSlot;
 	public Transform dropSlot;
+	public Transform faceSlot;
+
     public CapsuleCollider grabCollider;
 
     [Header("Moving")]

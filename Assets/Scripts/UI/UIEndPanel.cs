@@ -28,6 +28,8 @@ namespace QFramework.ThunderCooker
 			
 			backBtn.onClick.AddListener((() =>
 			{
+				AudioKit.PlaySound("click");
+				AudioKit.PlayMusic("首页教程BGM");
 				Debug.Log("游戏结束，返回初始界面");
 				var foundObject = GameObject.Find("CharacterController");
 				Destroy(foundObject);

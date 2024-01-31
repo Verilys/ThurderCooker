@@ -1,0 +1,69 @@
+
+柴犬拆(拆).png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Armleft
+  rotate: false
+  xy: 713, 21
+  size: 117, 137
+  orig: 117, 137
+  offset: 0, 0
+  index: -1
+Armright
+  rotate: false
+  xy: 856, 205
+  size: 84, 121
+  orig: 84, 121
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 439, 160
+  size: 319, 350
+  orig: 319, 350
+  offset: 0, 0
+  index: -1
+Forearmleft
+  rotate: true
+  xy: 439, 8
+  size: 150, 161
+  orig: 150, 161
+  offset: 0, 0
+  index: -1
+Forearmright
+  rotate: false
+  xy: 832, 65
+  size: 89, 119
+  orig: 89, 119
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 31
+  size: 435, 479
+  orig: 435, 479
+  offset: 0, 0
+  index: -1
+Legleft
+  rotate: false
+  xy: 602, 2
+  size: 109, 156
+  orig: 109, 156
+  offset: 0, 0
+  index: -1
+Legright
+  rotate: false
+  xy: 760, 186
+  size: 94, 140
+  orig: 94, 140
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: true
+  xy: 760, 328
+  size: 182, 222
+  orig: 182, 222
+  offset: 0, 0
+  index: -1
