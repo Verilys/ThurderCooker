@@ -9,52 +9,29 @@ namespace QFramework.ThunderCooker
 {
 	public partial class CharacterController : ViewController, IController
 	{
-		//private static CharacterController instance;
 		private DataModel mModel;
 		
 		private int order = 0;
 
-		private bool isPress = false;
-		// private void Awake()
-		// {
-		// 	if (instance == null)
-		// 	{
-		// 		instance = this;
-		// 		DontDestroyOnLoad(gameObject);
-		// 	}
-		// 	else
-		// 	{
-		// 		Destroy(gameObject);
-		// 	}
-		// }
+		private bool isDoll = false;
+
 		void Start()
 		{
 			mModel = this.GetModel<DataModel>();
-			// foreach (var spineActor in spineCharacters)
-			// {
-			// 	spineActor.SetActive(false);
-			// }
-			
 		}
 
 		void Update()
 		{
-			if (Input.GetKey(KeyCode.E) && !isPress)
+			//这里需要判断一下，只有非Doll的时候才能切换
+			if (Input.GetKey(KeyCode.E) && isDoll)
 			{
-				Debug.Log(isPress);
 				packCharacters[order].GetComponent<BasicPlatformerController>().isControlled = false;
 				order = (order + 1) % packCharacters.Count;
 				packCharacters[order].GetComponent<BasicPlatformerController>().isControlled = true;
-				isPress = true;
-				Invoke("DelayedAction", 1f);
-				
 			}
 		}
 		
-		void DelayedAction()
-		{
-			isPress = false;
-		}
+
 		// 购买角色的逻辑
 		public void PurchaseCharacter(DataModel.Actor currentActor)
 		{
@@ -76,11 +53,7 @@ namespace QFramework.ThunderCooker
 			// }
 			// else
 			// {
-			// 	characterPrefab.GetComponent<UIActorProperty>().isPicked = true;
-			// 	characterPrefab.GetComponent<Button>().interactable = false;
-			// 	Debug.Log(characterPrefab.name);
-			// 	ui_purchasedCharacters.Remove(characterPrefab);
-			// 	ui_backpackCharacters.Add(characterPrefab);				
+				
 			// }
 
 		}
@@ -91,18 +64,7 @@ namespace QFramework.ThunderCooker
 			// 将角色从背包列表中移除
 		}
 
-		public void UpdateUI()
-		{
-			Debug.Log("更新UI");
-			foreach (var actor in ui_Characters)
-			{
-				foreach (var VARIABLE in mModel.actorShopList)
-				{
-					
-				}
-				
-			}
-		}
+		public void UpdateUI(){}
 		public IArchitecture GetArchitecture()
 		{
 			return GameApp.Interface;

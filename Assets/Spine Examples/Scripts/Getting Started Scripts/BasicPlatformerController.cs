@@ -59,9 +59,7 @@ public class BasicPlatformerController : MonoBehaviour
 	public CharacterController controller;
 	public SkeletonRagdoll ragdoll;
 	public HitToRagdoll ragdollBehaviour;
-
 	
-
 	[Header("Controls")]
 	public string XAxis = "Horizontal";
 	public string ZAxis = "Vertical";
@@ -152,10 +150,8 @@ public class BasicPlatformerController : MonoBehaviour
             input.x = 0;
             input.z = 0;
         }
-
-
-        
-
+		
+		
         if (Input.GetButtonUp("B"))
 		{
 			doRag = true;
@@ -254,9 +250,7 @@ public class BasicPlatformerController : MonoBehaviour
             }
         }
 		
-
-        
-
+		
         bool stateChanged = previousState != currentState;
 		previousState = currentState;
 

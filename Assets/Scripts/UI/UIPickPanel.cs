@@ -68,6 +68,7 @@ namespace QFramework.ThunderCooker
 				
 				GameObject obj = GameObject.Find("curtain");
 				obj.SetActive(false);
+				
 				ActiveCharacter(mModel.actorPurchasedList);
 				controller.packCharacters[0].GetComponent<BasicPlatformerController>().isControlled = true;
 				this.CloseSelf();				

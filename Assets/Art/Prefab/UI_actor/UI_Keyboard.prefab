@@ -218,10 +218,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: keyboard
+  m_text: "\u6211\u662F\u952E\u76D8"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2b541377e53616e49bd91d655d3ccabf, type: 2}
-  m_sharedMaterial: {fileID: -8957686227295950688, guid: 2b541377e53616e49bd91d655d3ccabf,
+  m_fontAsset: {fileID: 11400000, guid: df6d953430f1c214097789993ffb060d, type: 2}
+  m_sharedMaterial: {fileID: -4591628228360443566, guid: df6d953430f1c214097789993ffb060d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

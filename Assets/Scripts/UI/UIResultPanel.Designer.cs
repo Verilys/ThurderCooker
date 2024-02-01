@@ -21,6 +21,8 @@ namespace QFramework.ThunderCooker
 		[SerializeField]
 		public UnityEngine.UI.Button nextBtn;
 		
+		public CharacterController controller;
+		
 		private UIResultPanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()

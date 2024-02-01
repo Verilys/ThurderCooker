@@ -6,7 +6,6 @@ namespace QFramework.ThunderCooker
 {
 	public class UIEndPanelData : UIPanelData
 	{
-		public string targetSceneName = "Main";
 	}
 	public partial class UIEndPanel : UIPanel, IController
 	{
@@ -31,9 +30,9 @@ namespace QFramework.ThunderCooker
 				AudioKit.PlaySound("click");
 				AudioKit.PlayMusic("首页教程BGM");
 				Debug.Log("游戏结束，返回初始界面");
-				var foundObject = GameObject.Find("CharacterController");
-				Destroy(foundObject);
-				SceneManager.LoadScene(mData.targetSceneName);
+				model.actorShopList.Clear();
+				model.actorPurchasedList.Clear();
+				SceneManager.LoadScene("Main");
 				UIKit.OpenPanel<UIStartPanel>();
 				this.CloseSelf();
 			}));

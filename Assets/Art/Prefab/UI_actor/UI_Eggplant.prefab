@@ -329,10 +329,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ------
+  m_text: "\u8304\u5B50"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74f4f613c2c70b14aa97b11f3a8034c5, type: 2}
-  m_sharedMaterial: {fileID: 2231552529046786567, guid: 74f4f613c2c70b14aa97b11f3a8034c5,
+  m_fontAsset: {fileID: 11400000, guid: df6d953430f1c214097789993ffb060d, type: 2}
+  m_sharedMaterial: {fileID: -4591628228360443566, guid: df6d953430f1c214097789993ffb060d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
