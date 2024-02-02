@@ -66,8 +66,8 @@ namespace QFramework.ThunderCooker
 				AudioKit.PlayMusic("表演BGM");
 				UIKit.OpenPanel<UIGameFloatPanel>(UILevel.PopUI);
 				
-				GameObject obj = GameObject.Find("curtain");
-				obj.SetActive(false);
+				objContrller = GameObject.Find("ObjectsController").GetComponent<ObjectsController>();
+				objContrller.curtain.SetActive(false);
 				
 				ActiveCharacter(mModel.actorPurchasedList);
 				controller.packCharacters[0].GetComponent<BasicPlatformerController>().isControlled = true;

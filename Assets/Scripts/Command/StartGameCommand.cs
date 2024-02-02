@@ -23,8 +23,7 @@ namespace QFramework.ThunderCooker
             gameModel.actorShopList.Add(new DataModel.Actor("Giraffe","UI_Giraffe",10));
       
             gameModel.actorPurchasedList.Add(new DataModel.Actor("Bin","UI_Bin",10));
-
-            gameModel.isCurtainOpen = true;
+            
             SceneManager.LoadScene("Level 1");
             this.SendEvent<GameStartEvent>();
             

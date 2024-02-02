@@ -160,8 +160,8 @@
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Editor\PlasticSCM\Tool\LaunchTool.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Editor\PlasticSCM\AssetsUtils\Processor\AssetsProcessor.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Editor\PlasticSCM\PlasticPluginIsEnabledPreference.cs" />
-     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Editor\PlasticSCM\Views\PendingChanges\PendingChangesTreeView.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Editor\PlasticSCM\AssetOverlays\Cache\SearchLocks.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Editor\PlasticSCM\Views\PendingChanges\PendingChangesTreeView.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Editor\PlasticSCM\Configuration\CloudEdition\Welcome\SignInPanel.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Editor\PlasticSCM\UI\Avatar\GetAvatar.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Editor\PlasticSCM\Views\PendingChanges\Dialogs\FilterRulesConfirmationDialog.cs" />

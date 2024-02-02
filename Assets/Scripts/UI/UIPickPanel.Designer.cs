@@ -18,6 +18,7 @@ namespace QFramework.ThunderCooker
 		public UnityEngine.UI.Button nextBtn;
 		
 		public CharacterController controller;
+		public ObjectsController objContrller;
 		public GameObject currentActor;
 		
 		private UIPickPanelData mPrivateData = null;
