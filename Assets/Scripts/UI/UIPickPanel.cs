@@ -8,6 +8,7 @@ namespace QFramework.ThunderCooker
 {
 	public class UIPickPanelData : UIPanelData
 	{
+		public GameObject mCurrentActor;
 	}
 	public partial class UIPickPanel : UIPanel, IController
 	{
@@ -31,34 +32,24 @@ namespace QFramework.ThunderCooker
 							//实例化角色
                         	currentActor = Instantiate(ui_actor, aContent);
                             currentActor.name = actor.actorName;
+                            currentActor.GetComponentInChildren<UIActorProperty>().txtPrice.SetActive(false);
+                            currentActor.GetComponent<Button>().onClick.AddListener(() => PickActor(mModel,actor));
+
+                            if (currentActor.name == "Bin")
+                            {
+	                            currentActor.GetComponent<Button>().onClick.Invoke();
+                            }
 						}
 					}
-					
-					// Button pickBtn = currentActor.GetComponent<Button>();
-					// bool isPicked = currentActor.GetComponent<UIActorProperty>().isPicked;
-					// //如果人物按钮已经被挑选
-					// if (isPicked)
-					// {
-					// 	pickBtn.interactable = false;
-					// }
-					// else
-					// {
-					// 	pickBtn.onClick.AddListener(() =>
-					// 	{
-					// 		currentActor = pickBtn.gameObject;
-					// 		controller.AddToBackpack(currentActor);
-					// 		//this.SendCommand<PurchaseCommand>();
-					// 	});						
-					// }
-
 				}
+				
 			}
 			else
 			{
 				Debug.LogWarning("未找到物体");
 			}
-			
-			
+
+
 			nextBtn.onClick.AddListener((() =>
 			{
 				Debug.Log("开始主场景");
@@ -68,17 +59,49 @@ namespace QFramework.ThunderCooker
 				
 				objContrller = GameObject.Find("ObjectsController").GetComponent<ObjectsController>();
 				objContrller.curtain.SetActive(false);
-				
-				ActiveCharacter(mModel.actorPurchasedList);
+				ActiveCharacter(mModel.actorPickList);
 				controller.packCharacters[0].GetComponent<BasicPlatformerController>().isControlled = true;
 				this.CloseSelf();				
 			}));
 
 		}
-
-		private void ActiveCharacter(List<DataModel.Actor> purchasedList)
+		public void PickActor(DataModel mModel, DataModel.Actor actor)
 		{
-			foreach (var actor in purchasedList)
+			print("选");
+			//已经被选过
+			if (actor.isPicked && mModel.actorPickList.Count > 1)
+			{
+				mModel.actorPickList.Remove(actor);
+				actor.isPicked = false;
+			}
+			else
+			{
+				if (mModel.actorPickList.Count == 3)
+            	{
+            		print("移除多余角色");
+            		mModel.actorPickList[0].isPicked = false;
+            		mModel.actorPickList.RemoveAt(0);
+            	}
+            	actor.isPicked = true;
+            	mModel.actorPickList.Add(actor);	
+			}
+			
+			//更新icon
+			foreach (Transform childTransform in aContent)
+			{
+				childTransform.GetComponentInChildren<UIActorProperty>().pickIcon.SetActive(false);	
+				foreach (var item in mModel.actorPickList)
+				{
+					if (childTransform.gameObject.name == item.actorName)
+					{
+						childTransform.GetComponentInChildren<UIActorProperty>().pickIcon.SetActive(true);		
+					}
+				}
+			}
+		}
+		private void ActiveCharacter(List<DataModel.Actor> pickList)
+		{
+			foreach (var actor in pickList)
 	        {
 	            foreach (var spineActor in controller.spineCharacters)
 	            {
@@ -89,7 +112,6 @@ namespace QFramework.ThunderCooker
                         curActor.name = spineActor.name;
                         curActor.SetActive(true);
                         controller.packCharacters.Add(curActor);
-                        
                     }
 	            }
 	        }
@@ -115,7 +137,6 @@ namespace QFramework.ThunderCooker
 		public void OnItemPick(Button btn)
 		{
 			btn.interactable = false;
-			
 		}
 		public IArchitecture GetArchitecture()
 		{

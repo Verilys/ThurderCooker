@@ -30,7 +30,6 @@ namespace QFramework.ThunderCooker
                     Debug.Log("天数不能为负！");
                 }
             }
-            
         }
         
         public int Scores
@@ -62,7 +61,6 @@ namespace QFramework.ThunderCooker
         [System.Serializable]
         public class Actor
         {
-            //public GameObject actorPrefab;
             public string actorName;
             public string avatarName;
             public int price;
@@ -80,13 +78,17 @@ namespace QFramework.ThunderCooker
 
         public List<Actor> actorShopList = new List<Actor>();
         public List<Actor> actorPurchasedList = new List<Actor>();
+        public List<Actor> actorPickList = new List<Actor>();
 
         protected override void OnInit()
         {
         }
-        
-        
-        
+
+
+        public class Audience
+        {
+            public int hotPints;
+        }
         
     }    
 }

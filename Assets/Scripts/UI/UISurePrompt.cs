@@ -11,7 +11,6 @@ namespace QFramework.ThunderCooker
 	}
 	public partial class UISurePrompt : UIPanel, IController
 	{
-		public bool isPurchase = false;
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UISurePromptData ?? new UISurePromptData();

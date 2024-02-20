@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\UI\UIStartPanel.cs" />
      <Compile Include="Assets\Scripts\UI\UISurePrompt.cs" />
      <Compile Include="Assets\Scripts\UI\UISurePrompt.Designer.cs" />
+     <Compile Include="Assets\Scripts\Utility\UIActorProperty.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\QFramework\Framework\PackageVersion.json" />
      <Folder Include="Library\PackageCache\com.unity.ads@4.4.2\Runtime" />
@@ -108,7 +109,6 @@
      <Folder Include="Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.10\Tests\Runtime" />
      <Folder Include="Library\PackageCache\com.unity.modules.animation@1.0.0" />
      <Folder Include="Assets\Art\Prefab" />
-     <Folder Include="Assets\Art\UI packages\Sweet Land GUI" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\basecommands.en.txt" />
      <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Localization\xdiff.ko.txt" />

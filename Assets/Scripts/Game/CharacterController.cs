@@ -31,7 +31,6 @@ namespace QFramework.ThunderCooker
 			}
 		}
 		
-
 		// 购买角色的逻辑
 		public void PurchaseCharacter(DataModel.Actor currentActor)
 		{
@@ -42,26 +41,34 @@ namespace QFramework.ThunderCooker
 			Debug.Log("买");
 		}
 		
-		public void AddToBackpack(GameObject characterPrefab)
+		public void AddToBackpack(DataModel.Actor currentActor)
 		{
-			// 将角色添加到背包的逻辑
-			// 检查背包是否已满
-			// 如果未满，将角色从已购买库移动到背包
-			// if (mModel..Count == 3)
-			// {
-			// 	Debug.Log("背包满了");
-			// }
-			// else
-			// {
-				
-			// }
+			//将角色添加到背包的逻辑
+			//检查背包是否已满
+			//如果未满，将角色从已购买库移动到背包
+			if (mModel.actorPickList.Count == 3)
+			{
+				Debug.Log("背包满了");
+			}
+			else
+			{
+				mModel.actorPurchasedList.Remove(currentActor);
+				mModel.actorPickList.Add(currentActor);
+				Debug.Log("添加角色");
+			}
 
 		}
 
-		public void RemoveFromBackpack(DataModel.Actor characterPrefab)
+		public void RemoveFromBackpack(DataModel.Actor currentActor)
 		{
-			// 将角色从背包中移除的逻辑
 			// 将角色从背包列表中移除
+			if (mModel.actorPickList != null)
+			{
+				mModel.actorPurchasedList.Remove(currentActor);
+				mModel.actorPickList.Add(currentActor);
+				Debug.Log("移除角色");				
+			}
+
 		}
 
 		public void UpdateUI(){}
