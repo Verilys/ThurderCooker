@@ -58,7 +58,9 @@ namespace QFramework.ThunderCooker
 				UIKit.OpenPanel<UIGameFloatPanel>(UILevel.PopUI);
 				
 				objContrller = GameObject.Find("ObjectsController").GetComponent<ObjectsController>();
-				objContrller.curtain.SetActive(false);
+				
+				this.SendCommand<TurnOffCurtainCommand>();
+				
 				ActiveCharacter(mModel.actorPickList);
 				controller.packCharacters[0].GetComponent<BasicPlatformerController>().isControlled = true;
 				this.CloseSelf();				

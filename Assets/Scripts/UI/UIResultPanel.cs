@@ -59,8 +59,9 @@ namespace QFramework.ThunderCooker
 				// 清空子物体列表
 				controller.characters.transform.DetachChildren();
 				controller.packCharacters.Clear();
+				
 				this.SendCommand<TurnCurtainCommand>();
-	
+				
 				this.CloseSelf();
 			}));
 		}

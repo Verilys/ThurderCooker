@@ -9,7 +9,7 @@ namespace QFramework.ThunderCooker
 	{
 		public int actTurn = 1;
 	}
-	public partial class UIGameFloatPanel : UIPanel
+	public partial class UIGameFloatPanel : UIPanel, IController
 	{
 		protected override void OnInit(IUIData uiData = null)
 		{
@@ -19,21 +19,23 @@ namespace QFramework.ThunderCooker
 			nextBtn.onClick.AddListener((() =>
 			{
 				Debug.Log($"下一幕是第{mData.actTurn}幕");
+				
 				AudioKit.PlaySound("click");
 				if (mData.actTurn == 3)
 				{
-					UIKit.OpenPanel<UIResultPanel>();
+					this.SendCommand<SettlementCommand>();
+					//UIKit.OpenPanel<UIResultPanel>();
 					this.Hide();	
 				}
 				else
 				{
-					
 					mData.actTurn++;
 				}
 				
 			}));
 		}
-		
+
+	
 		protected override void OnOpen(IUIData uiData = null)
 		{
 			mData.actTurn = 1;
@@ -49,6 +51,10 @@ namespace QFramework.ThunderCooker
 		
 		protected override void OnClose()
 		{
+		}
+		public IArchitecture GetArchitecture()
+		{
+			return GameApp.Interface;
 		}
 	}
 }

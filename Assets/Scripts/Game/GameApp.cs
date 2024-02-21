@@ -10,8 +10,11 @@ namespace QFramework.ThunderCooker
     {
         protected override void Init()
         {
+            // 注册 System
+            this.RegisterSystem(new AchievementSystem());
             // 注册 Model
             this.RegisterModel(new DataModel());
+            
         }
     }    
 }

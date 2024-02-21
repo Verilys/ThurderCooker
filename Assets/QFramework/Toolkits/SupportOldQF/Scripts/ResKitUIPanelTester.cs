@@ -29,7 +29,7 @@ namespace QFramework
                 yield return new WaitForSeconds(0.2f);
 			    UIKit.Root.SetResolution(1920,1080,0);
                 UIKit.OpenPanel(PanelName, Level);
-
+                
                 mOtherPanels.ForEach(panelTesterInfo => { UIKit.OpenPanel(panelTesterInfo.PanelName, panelTesterInfo.Level); });
             }
     }

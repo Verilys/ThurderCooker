@@ -35,7 +35,7 @@ namespace QFramework.ThunderCooker
 	                // 检查名字是否存在于哈希集合中
 	                if (nameHashSet.Contains(currentActor.name))
 	                {
-		                Debug.Log("在商店中，添加按钮监听"+currentActor.name);
+		                //Debug.Log("在商店中，添加按钮监听"+currentActor.name);
 		                
 						purchaseBtn.onClick.AddListener(() =>
                         {

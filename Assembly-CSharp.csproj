@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\UI\UIResultPanel.cs" />
      <Compile Include="Assets\Scripts\UI\UIPickPanel.Designer.cs" />
      <Compile Include="Assets\Scripts\Game\CharacterController.Designer.cs" />
+     <Compile Include="Assets\Scripts\Utility\UIActorProperty.cs" />
      <Compile Include="Assets\Scripts\UI\UIGoldPrompt.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UISettingsPanel.Designer.cs" />
      <Compile Include="Assets\Scripts\UI\UIStartPanel.Designer.cs" />
@@ -80,7 +81,10 @@
      <Compile Include="Assets\Scripts\UI\UIStartPanel.cs" />
      <Compile Include="Assets\Scripts\UI\UISurePrompt.cs" />
      <Compile Include="Assets\Scripts\UI\UISurePrompt.Designer.cs" />
-     <Compile Include="Assets\Scripts\Utility\UIActorProperty.cs" />
+     <Compile Include="Assets\Scripts\Event\StartPerformEvent.cs" />
+     <Compile Include="Assets\Scripts\System\AchievementSystem.cs" />
+     <Compile Include="Assets\Scripts\Event\EndPerformEvent.cs" />
+     <Compile Include="Assets\Scripts\Command\SettlementCommand.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\QFramework\Framework\PackageVersion.json" />
      <Folder Include="Library\PackageCache\com.unity.ads@4.4.2\Runtime" />

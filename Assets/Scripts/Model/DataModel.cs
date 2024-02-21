@@ -87,9 +87,16 @@ namespace QFramework.ThunderCooker
 
         public class Audience
         {
-            public int hotPints;
+            public float favorabilty;
+            public int tips;
+
+            public Audience(float favor, int tips)
+            {
+                favorabilty = favor;
+                this.tips = tips;
+            }
         }
-        
+        public Audience audience;
     }    
 }
 
